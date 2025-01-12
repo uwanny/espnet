@@ -19,23 +19,23 @@ unused_parameters: false
 freeze_param: ["frontend.upstream"]
 num_att_plot: 0
 
-frontend: s3prl
+frontend: xeus
 frontend_conf:
-    frontend_conf:
-        upstream: hf_wav2vec2_custom  # Note: If the upstream is changed, please change the input_size in the preencoder.
-        path_or_url: facebook/mms-1b
-    download_dir: ./hub
-    multilayer_feature: True
+    checkpoint: xeus/xeus_checkpoint.pth
+    config: xeus/config.yaml
+    use_mask: false
+    use_final_output: false
+    multilayer_feature: true
 
 preencoder: linear
 preencoder_conf:
-    input_size: 1280  # Note: If the upstream is changed, please change this value accordingly.
+    input_size: 1024  # Note: If the upstream is changed, please change this value accordingly.
     output_size: 80
 
 num_workers: 4
 batch_type: sorted
-batch_size: 4
-accum_grad: 8
+batch_size: 1
+accum_grad: 16
 patience: none
 init: none
 best_model_criterion:
