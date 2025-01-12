@@ -143,7 +143,7 @@ class ScoreModel(AbsDiffusion):
         t = (
             torch.rand(x.shape[0], device=x.device) * (self.sde.T - self.t_eps)
             + self.t_eps
-        )
+        ) # randomly select t, each training step train on a different t
         mean, std = self.sde.marginal_prob(x, t, y)
         z = torch.randn_like(x)  # i.i.d. normal distributed with var=0.5
         sigmas = std[:, None, None, None]

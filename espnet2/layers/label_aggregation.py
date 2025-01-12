@@ -65,12 +65,12 @@ class LabelAggregate(torch.nn.Module):
 
         # Step2: framing
         output = input.as_strided(
-            (bs, nframe, self.win_length, label_dim),
-            (max_length * label_dim, self.hop_length * label_dim, label_dim, 1),
+            (bs, nframe, self.win_length, label_dim), # shape
+            (max_length * label_dim, self.hop_length * label_dim, label_dim, 1), # strides
         )
 
         # Step3: aggregate label
-        output = torch.gt(output.sum(dim=2, keepdim=False), self.win_length // 2)
+        output = torch.gt(output.sum(dim=2, keepdim=False), self.win_length // 2) # sum over win_length, then if one label is more than half, it is considered as 1 in the frame
         output = output.float()
 
         # Step4: process lengths
@@ -85,7 +85,7 @@ class LabelAggregate(torch.nn.Module):
                 )
                 + 1
             )
-            output.masked_fill_(make_pad_mask(olens, output, 1), 0.0)
+            output.masked_fill_(make_pad_mask(olens, output, 1), 0.0) # mask the padded frames to 0
         else:
             olens = None
 
