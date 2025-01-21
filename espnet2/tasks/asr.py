@@ -51,6 +51,7 @@ from espnet2.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
 from espnet2.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
 from espnet2.asr.encoder.whisper_encoder import OpenAIWhisperEncoder
 from espnet2.asr.espnet_model import ESPnetASRModel
+from espnet2.asr.owsm_ctc_front_asr_model import OWSMCTCFrontASRModel
 from espnet2.asr.frontend.abs_frontend import AbsFrontend
 from espnet2.asr.frontend.default import DefaultFrontend
 from espnet2.asr.frontend.fused import FusedFrontends
@@ -58,6 +59,7 @@ from espnet2.asr.frontend.s3prl import S3prlFrontend
 from espnet2.asr.frontend.whisper import WhisperFrontend
 from espnet2.asr.frontend.windowing import SlidingWindow
 from espnet2.asr.frontend.xeus import XEUSFrontend
+from espnet2.asr.frontend.owsm import OWSMFrontend
 from espnet2.asr.maskctc_model import MaskCTCModel
 from espnet2.asr.pit_espnet_model import ESPnetASRModel as PITESPnetModel
 from espnet2.asr.postencoder.abs_postencoder import AbsPostEncoder
@@ -99,6 +101,7 @@ frontend_choices = ClassChoices(
         fused=FusedFrontends,
         whisper=WhisperFrontend,
         xeus=XEUSFrontend,
+        owsm=OWSMFrontend,
     ),  # If setting this to none, please make sure to provide input_size in the config.
     type_check=AbsFrontend,
     default="default",
@@ -128,6 +131,7 @@ model_choices = ClassChoices(
         espnet=ESPnetASRModel,
         maskctc=MaskCTCModel,
         pit_espnet=PITESPnetModel,
+        owsm_ctc_front_asr_model=OWSMCTCFrontASRModel,
     ),
     type_check=AbsESPnetModel,
     default="espnet",
