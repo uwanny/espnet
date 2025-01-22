@@ -1526,7 +1526,7 @@ class AbsTask(ABC):
                         project = args.wandb_project
 
                     # Wandb server generates a random name, if args.wandb_name is None
-                    name = args.wandb_name
+                    name = os.path.basename(args.config).replace(".yaml", "")
 
                     wandb.init(
                         entity=args.wandb_entity,
