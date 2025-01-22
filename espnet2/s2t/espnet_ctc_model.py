@@ -148,6 +148,37 @@ class ESPnetS2TCTCModel(AbsESPnetModel):
         )
         return encoder_out, encoder_out_lens
 
+    def encode_only_encoder(
+        self,
+        speech: torch.Tensor,
+        speech_lengths: torch.Tensor,
+    ):
+        """Encode input speech only through encoder, eject prompt encoder."""
+
+        # Extract speech features
+        with autocast(False):
+            # 1. Extract feats
+            feats, feats_lengths = self._extract_feats(speech, speech_lengths)
+
+            # 2. Data augmentation
+            if self.specaug is not None and self.training:
+                feats, feats_lengths = self.specaug(feats, feats_lengths)
+
+            # 3. Normalization for feature: e.g. Global-CMVN, Utterance-CMVN
+            if self.normalize is not None:
+                feats, feats_lengths = self.normalize(feats, feats_lengths)
+
+        # Forward encoder
+        encoder_out, encoder_out_lens, _ = self.encoder(
+            feats,
+            feats_lengths,
+            ctc=self.ctc,
+            prefix_embeds=None,
+            memory=None,
+            memory_mask=None,
+        )
+        return encoder_out, encoder_out_lens
+
     def forward(
         self,
         speech: torch.Tensor,

@@ -130,23 +130,13 @@ class OWSMFrontend(AbsFrontend):
         self, 
         input: torch.Tensor,
         input_lengths: torch.Tensor,
-        text: torch.Tensor,
-        text_lengths: torch.Tensor,
-        text_prev: torch.Tensor,
-        text_prev_lengths: torch.Tensor,
-        text_ctc: torch.Tensor,
-        text_ctc_lengths: torch.Tensor,
-        prefix: torch.Tensor,
-        prefix_lengths: torch.Tensor,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        feats, feats_lens = self.owsm_model.encode(
+        feats, feats_lens = self.owsm_model.encode_only_encoder(
             input, 
-            input_lengths, 
-            text_prev, 
-            text_prev_lengths, 
-            prefix, 
-            prefix_lengths, 
-        ) # feats: List[Tensor (batch, seq_len, feature_dim), ...] len(feats) == num_layers
+            input_lengths,
+        ) 
+        # feats: List[Tensor (batch, seq_len, feature_dim), ...] len(feats) == num_layers
+        # For owsm_ctc v4, the intermediate_out is 6, 12, 15, and 21 four layers, not all layers. 
         feats_lens = [feats_lens] * len(feats) # len(feats_lens) == num_layers
         if isinstance(feats, tuple): 
             last_layer_out, intermediate_out = feats
