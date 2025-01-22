@@ -87,7 +87,7 @@ class OWSMFrontend(AbsFrontend):
 
         device = "cuda" if torch.cuda.is_available() else "cpu"
         self.owsm_model, self.owsm_train_args = S2TTask.build_model_from_file(
-            ESPnetS2TCTCModel,
+            config,
             checkpoint,
             device
         )
