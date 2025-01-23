@@ -27,7 +27,7 @@ class Featurizer(torch.nn.Module):
     ):
         super().__init__()
         self.normalize = normalize
-        self.num_layers = ssl_model_args.encoder_conf["num_blocks"]
+        self.num_layers = len(layer_selections) if layer_selections is not None else 1
 
         if self.num_layers > 1:
             if layer_selections is not None:
@@ -39,8 +39,6 @@ class Featurizer(torch.nn.Module):
 
     def _weighted_sum(self, all_hs, all_lens):
         assert len(all_hs) == len(all_lens) > 1
-        for l in all_lens[1:]:
-            torch.allclose(all_lens[0], l)
         stacked_hs = torch.stack(all_hs, dim=0)
 
         if self.normalize:
@@ -60,8 +58,6 @@ class Featurizer(torch.nn.Module):
         if len(all_hs) == 1:
             return all_hs[0], all_lens[0]
 
-        all_hs = [h for idx, h in enumerate(all_hs) if idx in self.layer_selections]
-        all_lens = [l for idx, l in enumerate(all_lens) if idx in self.layer_selections]
         hs, hs_len = self._weighted_sum(all_hs, all_lens)
         return hs, hs_len
 
@@ -74,13 +70,13 @@ class OWSMFrontend(AbsFrontend):
         fs: Union[int, str], 
         checkpoint: str, 
         config: str, 
-        layer: int = -1,
+        layer_selections: List[int] = None,
         multilayer_feature: bool = False,
         tile_factor: int = 1
     ): 
         super().__init__()
 
-        self.layer = layer
+        self.layer_selections = layer_selections
         self.multilayer_feature = multilayer_feature
         self.tile_factor = tile_factor
         self.fs = fs
@@ -93,16 +89,9 @@ class OWSMFrontend(AbsFrontend):
         )
         self.owsm_model.eval()
 
-        if layer != -1:
-            layer_selections = [layer]
-            assert (
-                not multilayer_feature
-            ), "multilayer feature will be deactivated, when specific layer used"
-        else:
-            layer_selections = None
         # Weighted (trainable) sum of the features from the selected layers.
         self.featurizer = Featurizer(
-            self.owsm_model, self.owsm_train_args, layer_selections=layer_selections
+            self.owsm_model, self.owsm_train_args, layer_selections=self.layer_selections
         )
 
     def output_size(self) -> int:
@@ -135,17 +124,14 @@ class OWSMFrontend(AbsFrontend):
             input, 
             input_lengths,
         ) 
+
         # feats: List[Tensor (batch, seq_len, feature_dim), ...] len(feats) == num_layers
         # For owsm_ctc v4, the intermediate_out is 6, 12, 15, and 21 four layers, not all layers. 
-        feats_lens = [feats_lens] * len(feats) # len(feats_lens) == num_layers
         if isinstance(feats, tuple): 
-            last_layer_out, intermediate_out = feats
-            feats = [last_layer_out].extend(intermediate_out)
-        
-        if self.layer != -1:
-            layer = self.layer
-            feats, feats_lens = feats[layer], feats_lens[layer]
-            return feats, feats_lens
+            last_layer_out, intermediate_out = feats # intermediate_out [(index, encoder_out), ...]
+            intermediate_out = [x[1] for x in intermediate_out]
+            feats = [last_layer_out] + intermediate_out
+            feats_lens = [feats_lens] * len(feats) # len(feats_lens) == num_layers
 
         if self.multilayer_feature:
             feats, feats_lens = self.featurizer(feats, feats_lens)
