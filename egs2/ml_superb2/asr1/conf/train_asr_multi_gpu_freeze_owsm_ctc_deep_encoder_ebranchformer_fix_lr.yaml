@@ -37,6 +37,7 @@ frontend_conf:
     checkpoint: owsm/owsm_v4.pth
     config: owsm/config.yaml
     multilayer_feature: true
+    layer_selections: [6, 12, 15, 21, 27] # the layer number for weighted sum, the number is 1-indexed
 
 preencoder: linear
 preencoder_conf:
@@ -82,4 +83,4 @@ specaug_conf:
     num_time_mask: 10
 
 num_iters_per_epoch: 30000 # number of iterations per epoch
-max_epoch: 50
+max_epoch: 10
