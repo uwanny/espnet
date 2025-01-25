@@ -1,0 +1,85 @@
+encoder: e_branchformer
+encoder_conf:
+    output_size: 1024
+    attention_heads: 8
+    attention_layer_type: selfattn
+    pos_enc_layer_type: conv
+    rel_pos_type: latest
+    cgmlp_linear_units: 4096
+    cgmlp_conv_kernel: 31
+    use_linear_after_conv: false
+    gate_activation: identity
+    num_blocks: 2
+    dropout_rate: 0.1
+    positional_dropout_rate: 0.1
+    attention_dropout_rate: 0.1
+    input_layer: conv2d1
+    layer_drop_rate: 0.1
+    linear_units: 4096
+    positionwise_layer_type: linear
+    macaron_ffn: true
+    use_ffn: true
+    merge_conv_kernel: 31
+    use_flash_attn: false
+    activation_ckpt: true
+
+model_conf:
+    ctc_weight: 1.0
+    extract_feats_in_collect_stats: false
+
+use_amp: true
+unused_parameters: false
+freeze_param: ["frontend.xeus_model"]
+num_att_plot: 0
+
+frontend: s3prl
+frontend_conf:
+    frontend_conf:
+        upstream: xeus
+        path_or_url: /ocean/projects/cis210027p/qwang20/espnet/egs2/ml_superb2/asr1/xeus/xeus_checkpoint.pth
+    download_dir: ./hub
+    multilayer_feature: true
+    fs: 16k
+
+preencoder: linear
+preencoder_conf:
+    input_size: 1024  # Note: If the upstream is changed, please change this value accordingly.
+    output_size: 80
+
+num_workers: 4
+batch_type: sorted
+batch_size: 1
+accum_grad: 4
+valid_batch_type: sorted
+valid_batch_size: 4
+patience: none
+init: none
+best_model_criterion:
+-   - valid
+    - loss
+    - min
+keep_nbest_models: 2
+
+optim: adam
+optim_conf:
+    lr: 0.0002
+    weight_decay: 0.000001
+
+specaug: specaug
+specaug_conf:
+    apply_time_warp: true
+    time_warp_window: 5
+    time_warp_mode: bicubic
+    apply_freq_mask: true
+    freq_mask_width_range:
+    - 0
+    - 27
+    num_freq_mask: 2
+    apply_time_mask: true
+    time_mask_width_ratio_range:
+    - 0.
+    - 0.05
+    num_time_mask: 10
+
+num_iters_per_epoch: 5000 # number of iterations per epoch
+max_epoch: 50
