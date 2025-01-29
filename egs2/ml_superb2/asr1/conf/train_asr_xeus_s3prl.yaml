@@ -13,7 +13,7 @@ encoder_conf:
     dropout_rate: 0.1
     positional_dropout_rate: 0.1
     attention_dropout_rate: 0.1
-    input_layer: conv2d1
+    input_layer: conv2d2
     layer_drop_rate: 0.1
     linear_units: 4096
     positionwise_layer_type: linear
@@ -29,7 +29,7 @@ model_conf:
 
 use_amp: true
 unused_parameters: false
-freeze_param: ["frontend.xeus_model"]
+freeze_param: ["frontend.upstream"]
 num_att_plot: 0
 
 frontend: s3prl
@@ -48,7 +48,7 @@ preencoder_conf:
 
 num_workers: 4
 batch_type: sorted
-batch_size: 1
+batch_size: 8
 accum_grad: 4
 valid_batch_type: sorted
 valid_batch_size: 4
@@ -62,7 +62,7 @@ keep_nbest_models: 2
 
 optim: adam
 optim_conf:
-    lr: 0.0002
+    lr: 0.0004
     weight_decay: 0.000001
 
 specaug: specaug
@@ -75,11 +75,11 @@ specaug_conf:
     - 0
     - 27
     num_freq_mask: 2
-    apply_time_mask: true
+    apply_time_mask: false
     time_mask_width_ratio_range:
     - 0.
     - 0.05
     num_time_mask: 10
 
 num_iters_per_epoch: 5000 # number of iterations per epoch
-max_epoch: 50
+max_epoch: 10
