@@ -623,10 +623,7 @@ class ASRTask(AbsTask):
         )
 
         # Define aux ctc for intermediate layers, for the cases frondend dim != encoder dim
-        if (
-            args.model_conf.get("frontend_interctc_weight", None) != 0.0 and 
-            args.model_conf.get("frontend_interctc_weight", None) is not None
-        ):
+        if args.model_conf.get("frontend_interctc_weight", 0.0) != 0.0:
             if args.preencoder_conf.get("input_size", None) != args.encoder_conf.get("output_size", None):
                 frontend_interctc = CTC(
                     odim=vocab_size, 
