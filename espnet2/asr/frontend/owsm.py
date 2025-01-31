@@ -27,7 +27,7 @@ class Featurizer(torch.nn.Module):
     ):
         super().__init__()
         self.normalize = normalize
-        self.num_layers = len(layer_selections) if layer_selections is not None else 1
+        self.num_layers = len(layer_selections) if layer_selections is not None else ssl_model_args.encoder_conf["num_blocks"]
 
         if self.num_layers > 1:
             if layer_selections is not None:
@@ -70,16 +70,21 @@ class OWSMFrontend(AbsFrontend):
         fs: Union[int, str], 
         checkpoint: str, 
         config: str, 
-        layer_selections: List[int] = None,
+        layer_selections: Optional[List[int]] = None,
         multilayer_feature: bool = False,
-        tile_factor: int = 1
+        tile_factor: int = 1, 
+        use_all_layer_outs: bool = True, 
     ): 
         super().__init__()
 
-        self.layer_selections = layer_selections
         self.multilayer_feature = multilayer_feature
         self.tile_factor = tile_factor
         self.fs = fs
+        self.use_all_layer_outs = use_all_layer_outs
+
+        if use_all_layer_outs: 
+            assert layer_selections is None, "layer_selections must be None when use_all_layer_outs is True"
+        self.layer_selections = layer_selections
 
         device = "cuda" if torch.cuda.is_available() else "cpu"
         self.owsm_model, self.owsm_train_args = S2TTask.build_model_from_file(
@@ -120,18 +125,23 @@ class OWSMFrontend(AbsFrontend):
         input: torch.Tensor,
         input_lengths: torch.Tensor,
     ) -> Tuple[torch.Tensor, torch.Tensor]:
-        feats, feats_lens = self.owsm_model.encode_only_encoder(
+        feats, feats_lens, all_layer_outs = self.owsm_model.encode_only_encoder(
             input, 
             input_lengths,
         ) 
 
         # feats: List[Tensor (batch, seq_len, feature_dim), ...] len(feats) == num_layers
-        # For owsm_ctc v4, the intermediate_out is 6, 12, 15, and 21 four layers, not all layers. 
         if isinstance(feats, tuple): 
             last_layer_out, intermediate_out = feats # intermediate_out [(index, encoder_out), ...]
             intermediate_out = [x[1] for x in intermediate_out]
-            feats = [last_layer_out] + intermediate_out
+            if self.use_all_layer_outs:
+                feats = all_layer_outs
+            else: 
+                feats = [last_layer_out] + intermediate_out
             feats_lens = [feats_lens] * len(feats) # len(feats_lens) == num_layers
+        else: 
+            feats = all_layer_outs
+            feats_lens = [feats_lens] * len(feats)
 
         if self.multilayer_feature:
             feats, feats_lens = self.featurizer(feats, feats_lens)
