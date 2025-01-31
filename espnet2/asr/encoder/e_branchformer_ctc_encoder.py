@@ -517,10 +517,19 @@ class EBranchformerCTCEncoder(AbsEncoder):
             xs_pad = self.embed(xs_pad)
 
         intermediate_outs = []
+        all_layer_outs = []
+        num_layers = len(self.encoders)
+
         for layer_idx, encoder_layer in enumerate(self.encoders):
             xs_pad, masks = encoder_layer(
                 xs_pad, masks, memory=memory, memory_mask=memory_mask
             )
+
+            layer_out = xs_pad
+            if isinstance(layer_out, tuple):
+                layer_out = layer_out[0]
+            if layer_idx < num_layers - 1:
+                all_layer_outs.append(layer_out)
 
             if layer_idx + 1 in self.interctc_layer_idx:
                 encoder_out = xs_pad
@@ -547,7 +556,10 @@ class EBranchformerCTCEncoder(AbsEncoder):
             xs_pad = xs_pad[0]
 
         xs_pad = self.after_norm(xs_pad)
+        all_layer_outs.append(xs_pad)
         olens = masks.squeeze(1).sum(1)
+        assert len(all_layer_outs) == num_layers
+
         if len(intermediate_outs) > 0:
-            return (xs_pad, intermediate_outs), olens, None
-        return xs_pad, olens, None
+            return (xs_pad, intermediate_outs), olens, all_layer_outs
+        return xs_pad, olens, all_layer_outs
