@@ -1,6 +1,6 @@
 import argparse
 import logging
-from typing import Callable, Collection, Dict, List, Optional, Tuple
+from typing import Callable, Collection, Dict, List, Optional, Tuple, Union
 
 import numpy as np
 import torch
@@ -51,6 +51,7 @@ from espnet2.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
 from espnet2.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
 from espnet2.asr.encoder.whisper_encoder import OpenAIWhisperEncoder
 from espnet2.asr.espnet_model import ESPnetASRModel
+from espnet2.asr.espnet_model_lid_ctc_frontend import ESPnetASRLIDCTCFrontendModel
 from espnet2.asr.owsm_ctc_front_asr_model import OWSMCTCFrontASRModel
 from espnet2.asr.frontend.abs_frontend import AbsFrontend
 from espnet2.asr.frontend.default import DefaultFrontend
@@ -60,6 +61,7 @@ from espnet2.asr.frontend.whisper import WhisperFrontend
 from espnet2.asr.frontend.windowing import SlidingWindow
 from espnet2.asr.frontend.xeus import XEUSFrontend
 from espnet2.asr.frontend.owsm import OWSMFrontend
+from espnet2.asr.frontend.mms_s3prl import MMSS3prlFrontend
 from espnet2.asr.maskctc_model import MaskCTCModel
 from espnet2.asr.pit_espnet_model import ESPnetASRModel as PITESPnetModel
 from espnet2.asr.postencoder.abs_postencoder import AbsPostEncoder
@@ -103,6 +105,7 @@ frontend_choices = ClassChoices(
         whisper=WhisperFrontend,
         xeus=XEUSFrontend,
         owsm=OWSMFrontend,
+        mms=MMSS3prlFrontend,
     ),  # If setting this to none, please make sure to provide input_size in the config.
     type_check=AbsFrontend,
     default="default",
@@ -133,6 +136,7 @@ model_choices = ClassChoices(
         maskctc=MaskCTCModel,
         pit_espnet=PITESPnetModel,
         owsm_ctc_front_asr_model=OWSMCTCFrontASRModel,
+        espnet_model_lid_ctc_frontend=ESPnetASRLIDCTCFrontendModel,
     ),
     type_check=AbsESPnetModel,
     default="espnet",
@@ -508,7 +512,7 @@ class ASRTask(AbsTask):
 
     @classmethod
     @typechecked
-    def build_model(cls, args: argparse.Namespace) -> ESPnetASRModel:
+    def build_model(cls, args: argparse.Namespace) -> Union[ESPnetASRModel, ESPnetASRLIDCTCFrontendModel]:
         if isinstance(args.token_list, str):
             with open(args.token_list, encoding="utf-8") as f:
                 token_list = [line.rstrip() for line in f]
@@ -618,25 +622,57 @@ class ASRTask(AbsTask):
             odim=vocab_size, encoder_output_size=encoder_output_size, **args.ctc_conf
         )
 
+        # Define aux ctc for intermediate layers, for the cases frondend dim != encoder dim
+        if (
+            args.model_conf.get("frontend_interctc_weight", None) != 0.0 and 
+            args.model_conf.get("frontend_interctc_weight", None) is not None
+        ):
+            if args.preencoder_conf.get("input_size", None) != args.encoder_conf.get("output_size", None):
+                frontend_interctc = CTC(
+                    odim=vocab_size, 
+                    encoder_output_size=args.preencoder_conf.get("input_size", None),
+                )
+            else:
+                frontend_interctc = ctc
+        else:
+            frontend_interctc = None
+
         # 7. Build model
         try:
             model_class = model_choices.get_class(args.model)
         except AttributeError:
             model_class = model_choices.get_class("espnet")
-        model = model_class(
-            vocab_size=vocab_size,
-            frontend=frontend,
-            specaug=specaug,
-            normalize=normalize,
-            preencoder=preencoder,
-            encoder=encoder,
-            postencoder=postencoder,
-            decoder=decoder,
-            ctc=ctc,
-            joint_network=joint_network,
-            token_list=token_list,
-            **args.model_conf,
-        )
+        if model_class == ESPnetASRLIDCTCFrontendModel:
+            model = model_class(
+                vocab_size=vocab_size,
+                frontend=frontend,
+                specaug=specaug,
+                normalize=normalize,
+                preencoder=preencoder,
+                encoder=encoder,
+                postencoder=postencoder,
+                decoder=decoder,
+                ctc=ctc,
+                frontend_interctc=frontend_interctc,
+                joint_network=joint_network,
+                token_list=token_list,
+                **args.model_conf,
+            )
+        else:
+            model = model_class(
+                vocab_size=vocab_size,
+                frontend=frontend,
+                specaug=specaug,
+                normalize=normalize,
+                preencoder=preencoder,
+                encoder=encoder,
+                postencoder=postencoder,
+                decoder=decoder,
+                ctc=ctc,
+                joint_network=joint_network,
+                token_list=token_list,
+                **args.model_conf,
+            )
 
         # FIXME(kamo): Should be done in model?
         # 8. Initialize
