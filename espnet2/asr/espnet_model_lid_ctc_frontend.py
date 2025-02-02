@@ -337,17 +337,17 @@ class ESPnetASRLIDCTCFrontendModel(AbsESPnetModel):
                     frontend_loss_interctc = frontend_loss_interctc + loss_ic
 
                     # Collect Intermedaite CTC stats
-                    stats["loss_interctc_layer{}".format(layer_idx)] = (
+                    stats["loss_frontend_interctc_layer{}".format(layer_idx)] = (
                         loss_ic.detach() if loss_ic is not None else None
                     )
-                    stats["cer_interctc_layer{}".format(layer_idx)] = cer_ic
+                    stats["cer_frontend_interctc_layer{}".format(layer_idx)] = cer_ic
 
-            frontend_loss_interctc = frontend_loss_interctc / len(frontend_intermediate_outs)
+            frontend_loss_interctc = frontend_loss_interctc / len(self.frontend_aux_ctc)
 
             # calculate whole encoder loss
             loss_ctc = (
                 1 - self.frontend_interctc_weight
-            ) * loss_ctc + self.frontend_interctc_weight * loss_interctc
+            ) * loss_ctc + self.frontend_interctc_weight * frontend_loss_interctc
 
         if self.use_transducer_decoder:
             # 2a. Transducer decoder branch
