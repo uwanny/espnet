@@ -163,7 +163,7 @@ class ESPnetSSLModel(AbsESPnetModel):
         if use_final_output:
             encoder_out = encoder_out[1][:-1] + [encoder_out[0]]
         else:
-            encoder_out = encoder_out[1]
+            encoder_out = encoder_out[1] # (last layer out, list(all layers out))
         del feats, pad_masks
 
         return encoder_out, mask_info, features_pen, out_lens
