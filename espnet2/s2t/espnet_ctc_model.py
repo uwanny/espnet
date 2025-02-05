@@ -169,7 +169,7 @@ class ESPnetS2TCTCModel(AbsESPnetModel):
                 feats, feats_lengths = self.normalize(feats, feats_lengths)
 
         # Forward encoder
-        encoder_out, encoder_out_lens, _ = self.encoder(
+        encoder_out, encoder_out_lens, all_layer_outs = self.encoder(
             feats,
             feats_lengths,
             ctc=self.ctc,
@@ -177,7 +177,7 @@ class ESPnetS2TCTCModel(AbsESPnetModel):
             memory=None,
             memory_mask=None,
         )
-        return encoder_out, encoder_out_lens
+        return encoder_out, encoder_out_lens, all_layer_outs
 
     def forward(
         self,
