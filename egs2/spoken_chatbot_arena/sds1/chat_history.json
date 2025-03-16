@@ -1,0 +1,3592 @@
+[
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay hi"
+        },
+        {
+            "role": "user_A",
+            "content": "hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses"
+        },
+        {
+            "role": "user_B",
+            "content": "we can't even well we're not even really supposed to wear jeans very often"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature"
+        },
+        {
+            "role": "user_A",
+            "content": "right right is there is there um an- is there a like a code of dress where you work do they ask"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] not formally"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff"
+        },
+        {
+            "role": "user_A",
+            "content": "[noise] right"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or"
+        },
+        {
+            "role": "user_A",
+            "content": "right"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah yeah well i- i- that's right and it"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "unless it's an ex- you know an unusual day"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_A",
+            "content": "um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "um-hum"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "right"
+        },
+        {
+            "role": "user_A",
+            "content": "uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah or um-hum what area do you work in"
+        },
+        {
+            "role": "user_A",
+            "content": "uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "okay"
+        },
+        {
+            "role": "user_B",
+            "content": "[laughter]"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": "you know what i feel a comfortable in you don't wanna stand out too much"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_A",
+            "content": "um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um"
+        },
+        {
+            "role": "user_B",
+            "content": "yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": "you know what i feel a comfortable in you don't wanna stand out too much"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah that's true and um hm [noise] well that's it"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": "you know what i feel a comfortable in you don't wanna stand out too much"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah that's true and um hm [noise] well that's it"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] well that pretty much covers the subject [laughter] well thanks for calling me"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_B",
+            "content": "but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]"
+        },
+        {
+            "role": "user_A",
+            "content": "that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": "you know what i feel a comfortable in you don't wanna stand out too much"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah that's true and um hm [noise] well that's it"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] well that pretty much covers the subject [laughter] well thanks for calling me"
+        },
+        {
+            "role": "user_A",
+            "content": "oh it's been nice talking to you and i guess we just hang up huh okay all right nice talking to you bye-bye"
+        },
+        {
+            "role": "user_B",
+            "content": ""
+        }
+    ],
+    [
+        {
+            "role": "system",
+            "content": "You are simulating a conversation between two people"
+        },
+        {
+            "role": "user_A",
+            "content": "the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-"
+        },
+        {
+            "role": "user_B",
+            "content": "not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]"
+        },
+        {
+            "role": "user_B",
+            "content": "uh most of the women wear uh m- actually most of the women wear suits more than anything else"
+        },
+        {
+            "role": "user_A",
+            "content": "oh i see uh-huh"
+        },
+        {
+            "role": "user_B",
+            "content": "but i'm not in that professional of a position [noise] so i don't i'm not expected to do that"
+        },
+        {
+            "role": "user_A",
+            "content": "and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] yes pretty much i'm a secretary [noise] yeah"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing"
+        },
+        {
+            "role": "user_B",
+            "content": "y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear"
+        },
+        {
+            "role": "user_A",
+            "content": "that's that's right"
+        },
+        {
+            "role": "user_B",
+            "content": "it's just you know judging from what everyone else wears is how i determine"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah and"
+        },
+        {
+            "role": "user_B",
+            "content": "you know what i feel a comfortable in you don't wanna stand out too much"
+        },
+        {
+            "role": "user_A",
+            "content": "yeah that's true and um hm [noise] well that's it"
+        },
+        {
+            "role": "user_B",
+            "content": "[noise] well that pretty much covers the subject [laughter] well thanks for calling me"
+        },
+        {
+            "role": "user_A",
+            "content": "oh it's been nice talking to you and i guess we just hang up huh okay all right nice talking to you bye-bye"
+        },
+        {
+            "role": "user_B",
+            "content": "yep that's all good-bye okay bye"
+        },
+        {
+            "role": "user_A",
+            "content": ""
+        }
+    ]
+]

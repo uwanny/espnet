@@ -1,0 +1,10 @@
+{
+    "perplexity": 40.89000000000004,
+    "diversity": {
+        "Self-BLEU2-geometric": 100.0,
+        "Auto-BLEU2-geometric": 0.0,
+        "VERT": 0.0
+    },
+    "bert_score": 62.94163265306121,
+    "dialogpt_perplexity": 66986.73285714285
+}

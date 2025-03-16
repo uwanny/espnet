@@ -1,0 +1,149 @@
+Reference Response	Generated Response
+================================================================================
+Reference: hi um yeah i'd like to talk about how you dress for work and and um what do you normally what type of outfit do you normally have to wear
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: well i work in uh corporate control so we have to dress kind of nice so i usually wear skirts and sweaters in the winter time slacks i guess [noise] and in the summer just dresses
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: we can't even well we're not even really supposed to wear jeans very often
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: so it really doesn't vary that much from season to season since the office is kind of you know always the same temperature
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: right right is there is there um an- is there a like a code of dress where you work do they ask
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [noise] not formally
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: but it's kind of understood that we're supposed to dress a little bit nice a lot of times we have to go over to uh like jerry junkins' office and bill ellsworth's office to deliver stuff
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [noise] right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: and we prepare a lot of foils for marvin and bill so [noise] we have to dress a little bit nice we're not [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: right right and does it does it change i guess um you can can you judge like [noise] depending on what you think you'll be doing that day
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yes now you know if if every- like in august when everybody's on vacation or something we can dress a little more casual or
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: ice storms of course you know we all came in in our tennis shoes but [laughter] i guess that would have to do with the weather but um
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah yeah well i- i- that's right and it
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: unless it's an ex- you know an unusual day
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah and it was usually uh also uh where i was it was um i- in engineering and and it was it was a casual office there was no formal dress code but [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: um uh usually engineers are expected to to dress you know little more professionally it just in case things would come up during the day sometimes unexpected meetings or a client would come in and wanna see you [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: um-hum
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: uh other times it could be very casual if you knew you would be at a desk all day and nobody would see you [noise] um
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah or um-hum what area do you work in
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: uh well i was i was in a uh private consulting firm so um and uh and uh anyway um right now i- i'm not i'm not there but [laughter] but anyway
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: okay
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [laughter]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: um and seaso- really same season to season um uh it changes with the weather you know uh wear light clothing i guess if it's hot out but um
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: but then usually in the summer it's cold in the offices because the air conditioner's doing its job so well [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: that's true and and i think also that um the women actually have uh uh you have a little bit more variety m- maybe lighter cotton clothing in the summer and woolens in the winter whereas the
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: the men often have to wear shirt and tie no matter r- right right what time of what time of the year that's right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: uh-huh just suits and there's not a whole lot of fabric variance there and they can't have a rayon suit [laughter] so
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: that's that's true so um do they were were there um are you allowed to um be casual like if it was summer were were you allowed to wear sandals and those tha- [noise] not reall-
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: not really i think i mean it's kind of unwritten but i think we're supposed to wear hose and and shoes you know most of the people do anyway [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: uh most of the women wear uh m- actually most of the women wear suits more than anything else
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: oh i see uh-huh
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: but i'm not in that professional of a position [noise] so i don't i'm not expected to do that
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: and also like the um also the the all the supporting kind of stuff secretaries and clerks and things are they also they have same similar sim- yeah
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [noise] yes pretty much i'm a secretary [noise] yeah
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah ours were ours were different i guess it seemed like th- they were much there was much more casual dress although i don't think everybody looked at that you know as a good thing
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: y- yeah but there's really no written rule i guess they couldn't write that down that might be discrimination or something i don't know i mean i've never been told what to wear or what not to wear
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: that's that's right
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: it's just you know judging from what everyone else wears is how i determine
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah and
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: you know what i feel a comfortable in you don't wanna stand out too much
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yeah that's true and um hm [noise] well that's it
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [noise] well that pretty much covers the subject [laughter] well thanks for calling me
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: oh it's been nice talking to you and i guess we just hang up huh okay all right nice talking to you bye-bye
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: yep that's all good-bye okay bye
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
+Reference: [noise]
+Generated: Okay! So! I'm! Playing! With! You! I! Think! I! Can!! Alright! Let! me! know! what! you! want! and! I'll! respond! as!! Cool! Let's!! get! started! What! would!! you! like
+--------------------------------------------------------------------------------
