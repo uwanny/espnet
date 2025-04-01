@@ -10,6 +10,7 @@ from typeguard import typechecked
 from espnet2.iterators.abs_iter_factory import AbsIterFactory
 from espnet2.samplers.abs_sampler import AbsSampler
 from espnet2.samplers.category_balanced_sampler import CategoryBalancedSampler
+from typing import Optional
 
 
 def worker_init_fn(worker_id, base_seed=0):
@@ -49,7 +50,7 @@ class CategoryIterFactory(AbsIterFactory):
         self,
         dataset,
         batches: Union[AbsSampler, Sequence[Sequence[Any]]],
-        num_iters_per_epoch: int = None,
+        num_iters_per_epoch: Optional[int] = None,
         seed: int = 0,
         sampler_args: dict = None,
         shuffle: bool = False,
@@ -84,7 +85,7 @@ class CategoryIterFactory(AbsIterFactory):
             batches = list(batch_sampler)
 
             if self.sampler_args["num_batches"] is not None:
-                batches = batches[: self.sampler_args.num_batches]
+                batches = batches[: self.sampler_args["num_batches"]]
 
             if self.sampler_args["distributed"]:
                 world_size = torch.distributed.get_world_size()

@@ -524,7 +524,7 @@ class ESPnetDataset(AbsDataset):
 
                 func = dic["func"]
                 try:
-                    return func(path, **kwargs)
+                    return func(path, **kwargs) # for text, return the raw text
                 except Exception:
                     if hasattr(func, "__name__"):
                         name = func.__name__

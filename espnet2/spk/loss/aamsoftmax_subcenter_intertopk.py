@@ -139,6 +139,6 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
         else:
             output = (one_hot * phi) + ((1.0 - one_hot) * cosine)
         output *= self.scale
-
+        accuracy = (torch.argmax(output, dim=1) == label).float().mean()
         loss = self.ce(output, label)
-        return loss
+        return loss, accuracy

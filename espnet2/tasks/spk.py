@@ -45,6 +45,7 @@ from espnet2.train.preprocessor import (
     AbsPreprocessor,
     CommonPreprocessor,
     SpkPreprocessor,
+    LIDPreprocessor,
 )
 from espnet2.train.spk_trainer import SpkTrainer as Trainer
 from espnet2.utils.get_default_kwargs import get_default_kwargs
@@ -127,6 +128,7 @@ preprocessor_choices = ClassChoices(
     classes=dict(
         common=CommonPreprocessor,
         spk=SpkPreprocessor,
+        lid=LIDPreprocessor,
     ),
     type_check=AbsPreprocessor,
     default="spk",

@@ -50,6 +50,8 @@ from espnet2.asr.encoder.transformer_encoder_multispkr import (
 from espnet2.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
 from espnet2.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
 from espnet2.asr.encoder.whisper_encoder import OpenAIWhisperEncoder
+from espnet2.asr.encoder.lid_encoder import LIDEncoder
+from espnet2.asr.encoder.lid_encoder_ebranchformer import LIDEncoderEBranchformer
 from espnet2.asr.espnet_model import ESPnetASRModel
 from espnet2.asr.espnet_model_lid_ctc_frontend import ESPnetASRLIDCTCFrontendModel
 from espnet2.asr.owsm_ctc_front_asr_model import OWSMCTCFrontASRModel
@@ -64,6 +66,7 @@ from espnet2.asr.frontend.owsm import OWSMFrontend
 from espnet2.asr.frontend.mms_s3prl import MMSS3prlFrontend
 from espnet2.asr.maskctc_model import MaskCTCModel
 from espnet2.asr.pit_espnet_model import ESPnetASRModel as PITESPnetModel
+from espnet2.asr.lid_model import LIDModel
 from espnet2.asr.postencoder.abs_postencoder import AbsPostEncoder
 from espnet2.asr.postencoder.hugging_face_transformers_postencoder import (
     HuggingFaceTransformersPostEncoder,
@@ -137,6 +140,7 @@ model_choices = ClassChoices(
         pit_espnet=PITESPnetModel,
         owsm_ctc_front_asr_model=OWSMCTCFrontASRModel,
         espnet_model_lid_ctc_frontend=ESPnetASRLIDCTCFrontendModel,
+        lid_model=LIDModel,
     ),
     type_check=AbsESPnetModel,
     default="espnet",
@@ -172,6 +176,8 @@ encoder_choices = ClassChoices(
         avhubert=FairseqAVHubertEncoder,
         multiconv_conformer=MultiConvConformerEncoder,
         beats=BeatsEncoder,
+        lid_encoder=LIDEncoder,
+        lid_encoder_ebranchformer=LIDEncoderEBranchformer,
     ),
     type_check=AbsEncoder,
     default="rnn",
@@ -512,7 +518,7 @@ class ASRTask(AbsTask):
 
     @classmethod
     @typechecked
-    def build_model(cls, args: argparse.Namespace) -> Union[ESPnetASRModel, ESPnetASRLIDCTCFrontendModel]:
+    def build_model(cls, args: argparse.Namespace) -> Union[ESPnetASRModel, ESPnetASRLIDCTCFrontendModel, LIDModel]:
         if isinstance(args.token_list, str):
             with open(args.token_list, encoding="utf-8") as f:
                 token_list = [line.rstrip() for line in f]
@@ -575,7 +581,10 @@ class ASRTask(AbsTask):
 
         # 4. Encoder
         encoder_class = encoder_choices.get_class(args.encoder)
-        encoder = encoder_class(input_size=input_size, **args.encoder_conf)
+        if issubclass(encoder_class, (LIDEncoder, LIDEncoderEBranchformer)):
+            encoder = encoder_class(input_size=input_size, vocab_size=vocab_size, **args.encoder_conf)
+        else:
+            encoder = encoder_class(input_size=input_size, **args.encoder_conf)
 
         # 5. Post-encoder block
         # NOTE(kan-bayashi): Use getattr to keep the compatibility

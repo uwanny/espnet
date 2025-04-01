@@ -920,9 +920,15 @@ class Trainer:
                         summary_writer.add_figure(
                             f"{k}_{id_}", fig, reporter.get_epoch()
                         )
-
-                    if options.use_wandb:
-                        import wandb
-
-                        wandb.log({f"attention plot/{k}_{id_}": wandb.Image(fig)})
+                    
+                    # Commented when developing LID, because the fleurs data name is too long to log in wandb
+                    # if options.use_wandb:
+                    #     import wandb
+                    #     original_name = f"{k}_{id_}"
+                    #     if len(original_name) > 255:
+                    #         import hashlib
+                    #         short_name = hashlib.md5(original_name.encode()).hexdigest()
+                    #         wandb.log({f"attention plot/{short_name}": wandb.Image(fig)})
+                    #     else:
+                    #         wandb.log({f"attention plot/{original_name}": wandb.Image(fig)})
             reporter.next()

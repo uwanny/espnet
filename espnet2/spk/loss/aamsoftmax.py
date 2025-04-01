@@ -63,7 +63,7 @@ class AAMSoftmax(AbsLoss):
         cosine = F.linear(F.normalize(x), F.normalize(self.weight))
         # cos(theta + m)
         sine = torch.sqrt((1.0 - torch.mul(cosine, cosine)).clamp(0, 1))
-        phi = cosine * self.cos_m - sine * self.sin_m
+        phi = cosine * self.cos_m - sine * self.sin_m # cos(theta + m)
 
         if self.easy_margin:
             phi = torch.where(cosine > 0, phi, cosine)
@@ -74,6 +74,6 @@ class AAMSoftmax(AbsLoss):
         one_hot.scatter_(1, label.view(-1, 1), 1)
         output = (one_hot * phi) + ((1.0 - one_hot) * cosine)
         output = output * self.s
-
+        accuracy = (torch.argmax(output, dim=1) == label).float().mean()
         loss = self.ce(output, label)
-        return loss
+        return loss, accuracy

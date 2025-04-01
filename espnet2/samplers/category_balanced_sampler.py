@@ -62,7 +62,7 @@ class CategoryBalancedSampler(AbsSampler):
         for cat in categories:
             category2utt[cat] = category2utt[cat].split(" ")
             flattened_cats.extend([cat] * len(category2utt[cat]))
-            random.shuffle(category2utt[cat])
+            random.shuffle(category2utt[cat]) # shuffle the utterances corresponding to one category
 
         rand_idx = list(range(len(flattened_cats)))
         random.shuffle(rand_idx)

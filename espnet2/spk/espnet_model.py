@@ -96,6 +96,7 @@ class ESPnetSpeakerModel(AbsESPnetModel):
                 task_tokens.shape,
             )
         batch_size = speech.shape[0]
+        stats = dict()
 
         # 1. extract low-level feats (e.g., mel-spectrogram or MFCC)
         # Will do nothing for raw waveform-based models (e.g., RawNets)
@@ -114,9 +115,10 @@ class ESPnetSpeakerModel(AbsESPnetModel):
 
         # 4. calculate loss
         assert spk_labels is not None, "spk_labels is None, cannot compute loss"
-        loss = self.loss(spk_embd, spk_labels.squeeze())
+        loss, accuracy = self.loss(spk_embd, spk_labels.squeeze(dim=-1))
 
-        stats = dict(loss=loss.detach())
+        stats["loss"] = loss.detach()
+        stats["accuracy"] = accuracy.detach()
 
         loss, stats, weight = force_gatherable((loss, stats, batch_size), loss.device)
         return loss, stats, weight
