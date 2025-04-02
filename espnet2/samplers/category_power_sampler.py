@@ -47,13 +47,14 @@ class CategoryPowerSampler(AbsSampler):
         upsampling_factor: float = 1.0,
         drop_last: bool = False,
         category2utt_file: Optional[str] = None,
-        seed: int = 1,
+        epoch: int = 1,
         **kwargs,
     ):
         assert batch_bins > 0
         assert category2utt_file is not None
-        random.seed(seed)
-        np.random.seed(seed)
+        # set random seed as epoch, since we want to make the the sample different in each epoch
+        random.seed(epoch)
+        np.random.seed(epoch)
 
         self.batch_bins = batch_bins
         self.drop_last = drop_last
