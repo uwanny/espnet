@@ -35,6 +35,7 @@ from espnet2.optimizers.optim_groups import configure_optimizer
 from espnet2.optimizers.sgd import SGD
 from espnet2.samplers.build_batch_sampler import BATCH_TYPES, build_batch_sampler
 from espnet2.samplers.category_balanced_sampler import CategoryBalancedSampler
+from espnet2.samplers.category_power_sampler import CategoryPowerSampler
 from espnet2.samplers.unsorted_batch_sampler import UnsortedBatchSampler
 from espnet2.schedulers.cosine_anneal_warmup_restart import (
     CosineAnnealingWarmupRestarts,
@@ -44,6 +45,7 @@ from espnet2.schedulers.piecewise_linear_warmup_lr import PiecewiseLinearWarmupL
 from espnet2.schedulers.warmup_lr import WarmupLR
 from espnet2.schedulers.warmup_reducelronplateau import WarmupReduceLROnPlateau
 from espnet2.schedulers.warmup_step_lr import WarmupStepLR
+from espnet2.schedulers.tristage_lr import TristageLR
 from espnet2.torch_utils.load_pretrained_model import load_pretrained_model
 from espnet2.torch_utils.model_summary import model_summary
 from espnet2.torch_utils.pytorch_version import pytorch_cudnn_version
@@ -171,6 +173,7 @@ scheduler_classes = dict(
     onecyclelr=torch.optim.lr_scheduler.OneCycleLR,
     CosineAnnealingWarmRestarts=torch.optim.lr_scheduler.CosineAnnealingWarmRestarts,
     CosineAnnealingWarmupRestarts=CosineAnnealingWarmupRestarts,
+    tristagelr=TristageLR,
 )
 # To lower keys
 optim_classes = {k.lower(): v for k, v in optim_classes.items()}
@@ -800,6 +803,13 @@ class AbsTask(ABC):
             default="folded",
             choices=list(BATCH_TYPES),
             help=_batch_type_help,
+        )
+        group.add_argument(
+            "--upsampling_factor",
+            type=float,
+            default=0.5,
+            help="Used when batch_type='catpow' (CategoryPowerSampler), " \
+            "for upsample low-resource catageory",
         )
         group.add_argument(
             "--valid_batch_type",
@@ -1866,18 +1876,34 @@ class AbsTask(ABC):
                 "category2utt mandatory for category iterator, but not found"
             )
 
-        sampler_args = dict(
-            batch_size=iter_options.batch_size,
-            min_batch_size=(
-                torch.distributed.get_world_size() if iter_options.distributed else 1
-            ),
-            drop_last=args.drop_last_iter,
-            category2utt_file=category2utt_file,
-            epoch=1,
-            num_batches=iter_options.num_batches,
-            distributed=iter_options.distributed,
-        )
-        batch_sampler = CategoryBalancedSampler(**sampler_args)
+        if iter_options.batch_type == "catbel":
+            sampler_args = dict(
+                batch_size=iter_options.batch_size,
+                min_batch_size=(
+                    torch.distributed.get_world_size() if iter_options.distributed else 1
+                ),
+                drop_last=args.drop_last_iter,
+                category2utt_file=category2utt_file,
+                epoch=1,
+                num_batches=iter_options.num_batches,
+                distributed=iter_options.distributed,
+            )
+            batch_sampler = CategoryBalancedSampler(**sampler_args)
+        elif iter_options.batch_type == "catpow":
+            sampler_args = dict(
+                batch_bins=iter_options.batch_bins,
+                shape_files=iter_options.shape_files,
+                min_batch_size=(
+                    torch.distributed.get_world_size() if iter_options.distributed else 1
+                ),
+                upsampling_factor=args.upsampling_factor,
+                drop_last=args.drop_last_iter,
+                category2utt_file=category2utt_file,
+                seed=args.seed,
+            )
+            batch_sampler = CategoryPowerSampler(**sampler_args)
+        else:
+            raise ValueError(f"batch_type={iter_options.batch_type} is not supported")
 
         batches = list(batch_sampler)
 
