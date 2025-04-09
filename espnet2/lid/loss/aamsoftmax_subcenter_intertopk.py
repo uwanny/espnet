@@ -107,12 +107,16 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
             cosine, (-1, self.out_features, self.K)
         )  # (batch, out_dim, k)
         cosine, _ = torch.max(cosine, 2)  # (batch, out_dim)
+        pred_lids = torch.argmax(cosine, dim=1) # (batch,)
 
-        pred_lids = torch.argmax(cosine, dim=1) # (batch,), each is the index of the predicted lid
         if label is not None:
+            if len(label.size()) == 2:
+                label = label.squeeze(1)
             accuracy = (pred_lids == label).float().mean()
-        else:
+        else: # inference
+            loss = None
             accuracy = None
+            return loss, accuracy, pred_lids
 
         sine = torch.sqrt(1.0 - torch.pow(cosine, 2))
         phi = cosine * self.cos_m - sine * self.sin_m
@@ -126,8 +130,6 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
             phi = torch.where(cosine > self.th, phi, cosine - self.mmm)
             ########
 
-        if len(label.size()) == 2:
-            label = label.squeeze(1)
         one_hot = torch.zeros_like(cosine)
         one_hot.scatter_(1, label.view(-1, 1), 1)
 

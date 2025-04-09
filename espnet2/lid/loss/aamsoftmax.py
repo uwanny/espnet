@@ -54,21 +54,22 @@ class AAMSoftmax(AbsLoss):
         print("Initialised AAMSoftmax margin %.3f scale %.3f" % (self.m, self.s))
 
     def forward(self, x, label=None):
-        if len(label.size()) == 2:
-            label = label.squeeze(1)
-
-        assert x.size()[0] == label.size()[0]
         assert x.size()[1] == self.in_feats
 
         # cos(theta)
         # the normalized vector mul, the results is the cosine value
         cosine = F.linear(F.normalize(x), F.normalize(self.weight)) # F.normalize is L2 norm
+        pred_lids = torch.argmax(cosine, dim=1) # (batch,), each is the index of the predicted lid
 
-        pred_lids = torch.argmax(cosine, dim=1)
         if label is not None: # train or dev
+            assert x.size()[0] == label.size()[0]
+            if len(label.size()) == 2:
+                label = label.squeeze(1)
             accuracy = (pred_lids == label).float().mean()
-        else:
+        else: # inference
+            loss = None
             accuracy = None
+            return loss, accuracy, pred_lids
 
         # cos(theta + m)
         sine = torch.sqrt((1.0 - torch.mul(cosine, cosine)).clamp(0, 1))
@@ -83,8 +84,8 @@ class AAMSoftmax(AbsLoss):
         one_hot = torch.zeros_like(cosine)
         one_hot.scatter_(1, label.view(-1, 1), 1)
         # one_hot * phi is for the correct class, which needs margin, 
-        # while (1 - one_hot) * cosine is for the incorrect classes, which don't need margin
-        # output is the added margin logits, for softmax
+        # while (1 - one_hot) * cosine is for the incorrect classes, 
+        # which don't need margin
         output = (one_hot * phi) + ((1.0 - one_hot) * cosine) 
         output = output * self.s
         
