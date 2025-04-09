@@ -105,8 +105,9 @@ class CategoryIterFactory(AbsIterFactory):
                             f"The batch-size must be equal or more than world_size: "
                             f"{len(batch)} < {world_size}"
                         )
+                # one rank for one part of the batch, batch split
                 batches = [batch[rank::world_size] for batch in batches]
-            self.sampler = RawSampler(batches)
+            self.sampler = RawSampler(batches) # is directly wrap the batches
 
         if self.num_iters_per_epoch is not None:
             N = len(self.sampler)
