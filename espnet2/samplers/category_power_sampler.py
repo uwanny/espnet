@@ -52,6 +52,7 @@ class CategoryPowerSampler(AbsSampler):
         we only use one shape file, but to be campatible with other samplers, we
         still reserve the design of input with a shape file list style. 
         min_batch_size: the sampler will at least sample min_batch_size utterances
+        max_batch_size: the sampler will at most sample max_batch_size utterances, recommended to tune according to GPU to avoid OOM. 
         upsampling_factor: the beta in the formula above
         dataset_scaling_factor: if 1, then the number of utterances used is just the
         original dataset size, but the sampling rate of each language is changed. 
@@ -68,6 +69,7 @@ class CategoryPowerSampler(AbsSampler):
         batch_bins: int,
         shape_files: Union[Tuple[str, ...], List[str]],
         min_batch_size: int = 1,
+        max_batch_size: Optional[int] = None,
         upsampling_factor: float = 1.0,
         dataset_scaling_factor: float = 1.2, 
         drop_last: bool = False,
@@ -85,6 +87,7 @@ class CategoryPowerSampler(AbsSampler):
         self.batch_bins = batch_bins
         self.drop_last = drop_last
         self.min_batch_size = min_batch_size
+        self.max_batch_size = max_batch_size
         self.upsampling_factor = upsampling_factor
 
         assert len(shape_files) == 1, "only one shape file is supported"
@@ -143,7 +146,10 @@ class CategoryPowerSampler(AbsSampler):
             current_batch_size += 1
             sample_bins += current_batch_bins
 
-            if current_batch_bins > self.batch_bins and current_batch_size >= self.min_batch_size:
+            if (
+                current_batch_bins > self.batch_bins and current_batch_size >= self.min_batch_size
+                or self.max_batch_size is not None and current_batch_size >= self.max_batch_size
+            ):
                 self.batch_list.append(current_batch)
                 current_batch = []
                 current_batch_bins = 0
