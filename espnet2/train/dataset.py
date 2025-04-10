@@ -479,7 +479,7 @@ class ESPnetDataset(AbsDataset):
                 raise RuntimeError(f'"{name}" is duplicated for data-key')
 
             loader = self._build_loader(path, _type)
-            self.loader_dict[name] = loader
+            self.loader_dict[name] = loader # name is the "name" in "path_name_type_list"
             self.debug_info[name] = path, _type
             if len(self.loader_dict[name]) == 0:
                 raise RuntimeError(f"{path} has no samples")

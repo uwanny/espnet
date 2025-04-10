@@ -21,14 +21,16 @@ from espnet2.layers.utterance_mvn import UtteranceMVN
 from espnet2.spk.encoder.conformer_encoder import MfaConformerEncoder
 from espnet2.spk.encoder.ecapa_tdnn_encoder import EcapaTdnnEncoder
 from espnet2.spk.encoder.identity_encoder import IdentityEncoder
+from espnet2.spk.encoder.projector_encoder import ProjectorEncoder
 from espnet2.spk.encoder.rawnet3_encoder import RawNet3Encoder
 from espnet2.spk.encoder.ska_tdnn_encoder import SkaTdnnEncoder
 from espnet2.spk.encoder.xvector_encoder import XvectorEncoder
-from espnet2.spk.espnet_model import ESPnetSpeakerModel
-from espnet2.spk.loss.aamsoftmax import AAMSoftmax
-from espnet2.spk.loss.aamsoftmax_subcenter_intertopk import (
+from espnet2.lid.espnet_model import ESPnetLIDModel
+from espnet2.lid.loss.aamsoftmax import AAMSoftmax
+from espnet2.lid.loss.aamsoftmax_subcenter_intertopk import (
     ArcMarginProduct_intertopk_subcenter,
 )
+from espnet2.lid.loss.softmax import Softmax
 from espnet2.spk.pooling.abs_pooling import AbsPooling
 from espnet2.spk.pooling.chn_attn_stat_pooling import ChnAttnStatPooling
 from espnet2.spk.pooling.mean_pooling import MeanPooling
@@ -37,6 +39,7 @@ from espnet2.spk.projector.abs_projector import AbsProjector
 from espnet2.spk.projector.rawnet3_projector import RawNet3Projector
 from espnet2.spk.projector.ska_tdnn_projector import SkaTdnnProjector
 from espnet2.spk.projector.xvector_projector import XvectorProjector
+from espnet2.spk.projector.identity_projector import IdentityProjector
 from espnet2.tasks.abs_task import AbsTask
 from espnet2.torch_utils.initialize import initialize
 from espnet2.train.class_choices import ClassChoices
@@ -47,7 +50,7 @@ from espnet2.train.preprocessor import (
     SpkPreprocessor,
     LIDPreprocessor,
 )
-from espnet2.train.lid_trainer import LIDTrainer as Trainer
+from espnet2.train.lid_trainer import LIDTrainer
 from espnet2.utils.get_default_kwargs import get_default_kwargs
 from espnet2.utils.nested_dict_action import NestedDictAction
 from espnet2.utils.types import int_or_none, str2bool, str_or_none
@@ -96,6 +99,7 @@ encoder_choices = ClassChoices(
         rawnet3=RawNet3Encoder,
         ska_tdnn=SkaTdnnEncoder,
         xvector=XvectorEncoder,
+        projector=ProjectorEncoder,
     ),
     type_check=AbsEncoder,
     default="rawnet3",
@@ -118,6 +122,7 @@ projector_choices = ClassChoices(
         rawnet3=RawNet3Projector,
         ska_tdnn=SkaTdnnProjector,
         xvector=XvectorProjector,
+        identity=IdentityProjector,
     ),
     type_check=AbsProjector,
     default="rawnet3",
@@ -139,6 +144,7 @@ loss_choices = ClassChoices(
     classes=dict(
         aamsoftmax=AAMSoftmax,
         aamsoftmax_sc_topk=ArcMarginProduct_intertopk_subcenter,
+        softmax=Softmax,
     ),
     default="aamsoftmax",
 )
@@ -158,7 +164,7 @@ class LIDTask(AbsTask):
         loss_choices,
     ]
 
-    trainer = Trainer
+    trainer = LIDTrainer
 
     @classmethod
     def add_task_arguments(cls, parser: argparse.ArgumentParser):
@@ -239,7 +245,7 @@ class LIDTask(AbsTask):
         group.add_argument(
             "--model_conf",
             action=NestedDictAction,
-            default=get_default_kwargs(ESPnetSpeakerModel),
+            default=get_default_kwargs(ESPnetLIDModel),
             help="The keyword arguments for model class.",
         )
 
@@ -274,7 +280,7 @@ class LIDTask(AbsTask):
     def required_data_names(
         cls, train: bool = True, inference: bool = False
     ) -> Tuple[str, ...]:
-        retval = ("speech", "spk_labels")
+        retval = ("speech", "lid_labels")
         return retval
 
     @classmethod
@@ -284,13 +290,13 @@ class LIDTask(AbsTask):
         # When calculating EER, we need trials where each trial has two
         # utterances. speech2 corresponds to the second utterance of each
         # trial pair in the validation/inference phase.
-        retval = ("speech2", "trial", "spk_labels", "task_tokens")
+        retval = ("speech2", "trial", "lid_labels", "task_tokens")
 
         return retval
 
     @classmethod
     @typechecked
-    def build_model(cls, args: argparse.Namespace) -> ESPnetSpeakerModel:
+    def build_model(cls, args: argparse.Namespace) -> ESPnetLIDModel:
 
         if args.frontend is not None:
             frontend_class = frontend_choices.get_class(args.frontend)
@@ -333,7 +339,7 @@ class LIDTask(AbsTask):
             nout=projector_output_size, nclasses=args.spk_num, **args.loss_conf
         )
 
-        model = ESPnetSpeakerModel(
+        model = ESPnetLIDModel(
             frontend=frontend,
             specaug=specaug,
             normalize=normalize,

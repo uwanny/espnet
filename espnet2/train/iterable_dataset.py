@@ -180,7 +180,7 @@ class IterableESPnetDataset(IterableDataset):
             # 1. Read a line from each file
             while True:
                 keys = []
-                values = []
+                values = [] # values is all type of values corresponding to one specific uid
                 for f in files:
                     linenum += 1
                     try:

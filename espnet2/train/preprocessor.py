@@ -2163,10 +2163,10 @@ class SpkPreprocessor(CommonPreprocessor):
     ) -> Dict[str, np.ndarray]:
         """Make speaker labels into integers."""
         if self.train:
-            int_label = self.spk2label[data["spk_labels"]]
-            data["spk_labels"] = np.asarray([int_label], dtype=np.int64)
+            int_label = self.spk2label[data["lid_labels"]]
+            data["lid_labels"] = np.asarray([int_label], dtype=np.int64)
         else:
-            data["spk_labels"] = np.asarray([int(data["spk_labels"])])
+            data["lid_labels"] = np.asarray([int(data["lid_labels"])])
 
         if "task_tokens" in data:
             data["task_tokens"] = np.asarray([int(data["task_tokens"])])
@@ -2189,9 +2189,9 @@ class LIDPreprocessor(CommonPreprocessor):
     Args:
         train (bool): Whether to use in training mode.
         spk2utt (str): Path to the `spk2utt` file.
-        target_duration (float): Target duration in seconds.
+        target_duration (float): Target duration in seconds, if fix_duration, clip to this duration.
+        fix_duration (bool): Whether to fix the duration of the audio.
         sample_rate (int): Sampling rate.
-        num_eval (int): Number of utterances to be used for evaluation.
         rir_scp (str): Path to the RIR scp file.
         rir_apply_prob (float): Probability of applying RIR.
         noise_info (List[Tuple[float, str, Tuple[int, int], Tuple[float, float]]]):
@@ -2209,10 +2209,10 @@ class LIDPreprocessor(CommonPreprocessor):
     def __init__(
         self,
         train: bool,
-        target_duration: float,  # in seconds
         spk2utt: Optional[str] = None,
+        fix_duration: bool = True,
+        target_duration: Optional[float] = None,  # in seconds
         sample_rate: int = 16000,
-        num_eval: int = 10,
         rir_scp: Optional[str] = None,
         rir_apply_prob: float = 1.0,
         noise_info: List[
@@ -2225,8 +2225,9 @@ class LIDPreprocessor(CommonPreprocessor):
 
         self.spk2label = None  # a dictionary that maps string speaker label to int
         self.sample_rate = sample_rate
-        self.target_duration = int(target_duration * sample_rate)
-        self.num_eval = num_eval
+        self.target_duration = int(target_duration * sample_rate) if target_duration else None
+        self.fix_duration = fix_duration
+        self.train = train
 
         with open(spk2utt, "r") as f_s2u:
             self.spk2utt = f_s2u.readlines()
@@ -2266,9 +2267,12 @@ class LIDPreprocessor(CommonPreprocessor):
         msg = f"{name}(train={self.train}"
         if self.spk2label:
             msg += f", len(spk2label)={len(self.spk2label)}"
-        for key in ("target_duration", "sample_rate", "num_eval"):
-            if getattr(self, key):
-                msg += f", {key}={getattr(self, key)}"
+        if self.fix_duration:
+            msg += f", fix_duration={self.fix_duration}"
+            msg += f", target_duration={self.target_duration}"
+        else:
+            msg += f", fix_duration={self.fix_duration}"
+        msg + f", sample_rate={self.sample_rate}"
         if self.rirs is not None and self.rir_apply_prob > 0:
             msg += f", rir_scp={self.rir_scp}, rir_apply_prob={self.rir_apply_prob}"
         if self.noise_apply_prob > 0 and self.noises:
@@ -2291,21 +2295,23 @@ class LIDPreprocessor(CommonPreprocessor):
         # For LID, since we don't do speaker verification in validation, 
         # so for the train and valid the speech process is same
         audio = data["speech"]
+        # use raw speech defaultly, clip to fix duration 
+        # if set target_duration and fix_duration is True
+        if self.fix_duration and self.target_duration is not None:
+            # duplicate if utt is shorter than minimum required duration
+            if len(audio) < self.target_duration:
+                shortage = self.target_duration - len(audio) + 1
+                audio = np.pad(audio, (0, shortage), "wrap")
 
-        # duplicate if utt is shorter than minimum required duration
-        if len(audio) < self.target_duration:
-            shortage = self.target_duration - len(audio) + 1
-            audio = np.pad(audio, (0, shortage), "wrap")
+            startframe = np.array(
+                [np.int64(random.random() * (len(audio) - self.target_duration))]
+            )
+            # random select the start of the speech, and only use the target duration of speech
+            data["speech"] = audio[
+                int(startframe) : int(startframe) + self.target_duration
+            ]
 
-        startframe = np.array(
-            [np.int64(random.random() * (len(audio) - self.target_duration))]
-        )
-        # random select the start of the speech, and only use the target duration of speech
-        data["speech"] = audio[
-            int(startframe) : int(startframe) + self.target_duration
-        ]
-
-        if self.noise_apply_prob > 0 or self.rir_apply_prob > 0:
+        if self.train and self.noise_apply_prob > 0 or self.rir_apply_prob > 0:
             data["speech"] = self._apply_data_augmentation(data["speech"])
 
         return data
@@ -2406,8 +2412,8 @@ class LIDPreprocessor(CommonPreprocessor):
         self, data: Dict[str, Union[str, np.ndarray]]
     ) -> Dict[str, np.ndarray]:
         """Make speaker labels into integers."""
-        int_label = self.spk2label[data["spk_labels"]]
-        data["spk_labels"] = np.asarray([int_label], dtype=np.int64)
+        int_label = self.spk2label[data["lid_labels"]]
+        data["lid_labels"] = np.asarray([int_label], dtype=np.int64)
 
         if "task_tokens" in data:
             data["task_tokens"] = np.asarray([int(data["task_tokens"])])

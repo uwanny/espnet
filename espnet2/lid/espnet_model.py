@@ -74,12 +74,6 @@ class ESPnetLIDModel(AbsESPnetModel):
             task_tokens: (Batch, )
             task tokens used in case of token-based trainings
         """
-        # DEBUG
-        num_samples_per_batch = sum(s.shape[0] for s in speech)
-        logging.info(f"+++++++++num_samples_per_batch: {num_samples_per_batch}")
-        logging.info(f"+++++++++batch size: {speech.shape[0]}")
-        logging.info(f"+++++++++sample 1 size: {speech[0].shape[0]}")
-        logging.info(f"+++++++++sample 2 size: {speech[1].shape[0]}")
 
         if lid_labels is not None:
             assert speech.shape[0] == lid_labels.shape[0], (
@@ -106,6 +100,7 @@ class ESPnetLIDModel(AbsESPnetModel):
         lang_embd = self.project_lang_embd(utt_level_feat)
 
         # 4. calculate loss
+        # NOTE: if lid_labels is None, loss and accuracy are None
         loss, accuracy, pred_lids = self.loss(lang_embd, lid_labels)
 
         if extract_embd:

@@ -812,6 +812,19 @@ class AbsTask(ABC):
             "for upsample low-resource catageory",
         )
         group.add_argument(
+            "--dataset_scaling_factor",
+            type=float,
+            default=1.2,
+            help="Used when batch_type='catpow' (CategoryPowerSampler), " \
+            "control the scaled dataset size after upsampling",
+        )
+        group.add_argument(
+            "--max_batch_size",
+            type=int_or_none,
+            default=None,
+            help="Max batch size for CategoryPowerSampler",
+        )
+        group.add_argument(
             "--valid_batch_type",
             type=str_or_none,
             default=None,
@@ -1896,10 +1909,14 @@ class AbsTask(ABC):
                 min_batch_size=(
                     torch.distributed.get_world_size() if iter_options.distributed else 1
                 ),
+                max_batch_size=args.max_batch_size,
                 upsampling_factor=args.upsampling_factor,
+                dataset_scaling_factor=args.dataset_scaling_factor,
                 drop_last=args.drop_last_iter,
                 category2utt_file=category2utt_file,
-                seed=args.seed,
+                epoch=1,
+                num_batches=iter_options.num_batches,
+                distributed=iter_options.distributed,
             )
             batch_sampler = CategoryPowerSampler(**sampler_args)
         else:
@@ -1936,6 +1953,7 @@ class AbsTask(ABC):
             seed=args.seed,
             num_iters_per_epoch=iter_options.num_iters_per_epoch,
             sampler_args=sampler_args,
+            batch_type=iter_options.batch_type,
             shuffle=iter_options.train,
             num_workers=args.num_workers,
             collate_fn=iter_options.collate_fn,
