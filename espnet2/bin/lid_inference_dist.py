@@ -154,7 +154,7 @@ def extract_embed_lid(args):
 
     # 7. Merge results from all processes
     if distributed_option.distributed:
-        torch.distributed.barrier()
+        torch.distributed.barrier() # sync all processes
     if not distributed_option.distributed or distributed_option.dist_rank == 0:
         # Combine dictionaries into one
         if args.extract_embd:
@@ -180,10 +180,10 @@ def extract_embed_lid(args):
                 os.remove(npz)
 
         with open(f"{args.output_dir}/{set_name}_lids", "w") as f:
-            json.dump(lid_dic, f, indent=2)
+            for utt_id, lid in lid_dic.items():
+                f.write(f"{utt_id} {lid}\n")
         for lid_file in lid_files:
             os.remove(lid_file)
-
 
 def get_parser():
     parser = config_argparse.ArgumentParser(

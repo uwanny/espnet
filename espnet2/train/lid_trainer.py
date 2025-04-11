@@ -72,6 +72,7 @@ class LIDTrainer(Trainer):
             world_size = 1
         idx = 0
         step = 0 # for save middle results
+        num_recheck = 0
         if resume:
             skip_utts = set()
             if os.path.exists(f"{output_dir}/lids{rank}"):
@@ -90,6 +91,9 @@ class LIDTrainer(Trainer):
             ):
                 if resume:
                     if _utt_id in skip_utts:
+                        if num_recheck % save_every == 0 and num_recheck > 0:
+                            logging.info(f"[Rank {rank}] Skip utterance {num_recheck - save_every}-{num_recheck}.")
+                        num_recheck += 1
                         continue
                 if _utt_id not in utt_id_whole_list:
                     utt_id_whole_list.append(_utt_id)
@@ -100,8 +104,16 @@ class LIDTrainer(Trainer):
                     idx += 1
 
                     if len(utt_id_list) == custom_bs:
-                        speech_list = torch.stack(speech_list, dim=0) # (bs, t), t is the length of the speech
-                        speech_length_list = torch.stack(speech_length_list, dim=0) # (bs,)
+                        try:
+                            speech_list = torch.stack(speech_list, dim=0) # (bs, t), t is the length of the speech
+                            speech_length_list = torch.stack(speech_length_list, dim=0) # (bs,)
+                        except RuntimeError as e: # for last few batches, pad to the same length
+                            max_len = max(s.size(0) for s in speech_list)
+                            speech_list = torch.stack(
+                                [F.pad(s, (0, max_len - s.size(0))) for s in speech_list],
+                                dim=0
+                            )
+                            speech_length_list = torch.stack(speech_length_list, dim=0)
                         speech_list = to_device(
                             speech_list, "cuda" if ngpu > 0 else "cpu"
                         )
@@ -151,8 +163,16 @@ class LIDTrainer(Trainer):
                         speech_length_list = []
 
         if len(utt_id_list) != 0:
-            speech_list = torch.stack(speech_list, dim=0)
-            speech_length_list = torch.stack(speech_length_list, dim=0) # (bs,)
+            try:
+                speech_list = torch.stack(speech_list, dim=0)
+                speech_length_list = torch.stack(speech_length_list, dim=0) # (bs,)
+            except RuntimeError as e: # for last few batches, pad to the same length
+                max_len = max(s.size(0) for s in speech_list)
+                speech_list = torch.stack(
+                    [F.pad(s, (0, max_len - s.size(0))) for s in speech_list],
+                    dim=0
+                )
+                speech_length_list = torch.stack(speech_length_list, dim=0)
             speech_list = to_device(
                 speech_list, "cuda" if ngpu > 0 else "cpu"
             )
