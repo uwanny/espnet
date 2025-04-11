@@ -11,6 +11,7 @@ import numpy as np
 import torch
 from torch.multiprocessing.spawn import ProcessContext
 
+from espnet2.torch_utils.model_summary import model_summary
 from espnet2.samplers.build_batch_sampler import BATCH_TYPES
 from espnet2.torch_utils.set_all_random_seed import set_all_random_seed
 from espnet2.train.distributed_utils import (
@@ -82,6 +83,7 @@ def extract_embed_lid(args):
     lid_model, lid_train_args = LIDTask.build_model_from_file(
         args.lid_train_config, args.lid_model_file, device
     )
+    logging.info(model_summary(lid_model))
 
     # 3. Overwrite args with inference args
     args = vars(args)
@@ -145,6 +147,9 @@ def extract_embed_lid(args):
             output_dir=args.output_dir,
             custom_bs=custom_bs,
             idx2lang=idx2lang,
+            extract_embd=args.extract_embd, # default: False
+            save_every=args.save_every,
+            resume=args.resume,
         )
 
     # 7. Merge results from all processes
@@ -235,6 +240,12 @@ def get_parser():
         "--lid_model_file",
         type=str,
         help="LID model parameter file",
+    )
+    group.add_argument(
+        "--extract_embd",
+        type=str2bool,
+        default=False,
+        help="Determine whether to extract embedding or not",
     )
 
     group = parser.add_argument_group("distributed training related")
@@ -441,6 +452,18 @@ def get_parser():
         type=str2bool,
         default=True,
         help="Apply preprocessing to data or not",
+    )
+    group.add_argument(
+        "--save_every",
+        type=int,
+        default=1000,
+        help="Save every N data samples",
+    )
+    group.add_argument(
+        "--resume",
+        type=str2bool,
+        default=True,
+        help="If True, avoid repeating existing inference results",
     )
 
     return parser

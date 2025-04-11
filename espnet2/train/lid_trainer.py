@@ -1,10 +1,5 @@
 """
-Trainer module for speaker recognition.
-In speaker recognition (embedding extractor training/inference),
-calculating validation loss in closed set is not informative since
-generalization in unseen utterances from known speakers are good in most cases.
-Thus, we measure open set equal error rate (EER) using unknown speakers by
-overriding validate_one_epoch.
+Trainer module for language identification and language embedding extraction.
 """
 
 from typing import Dict, Iterable
@@ -12,14 +7,15 @@ from typing import Dict, Iterable
 import numpy as np
 import torch
 import torch.nn.functional as F
-import json
+import os
+import logging
+from tqdm import tqdm
 
 from typeguard import typechecked
 from espnet2.torch_utils.device_funcs import to_device
 from espnet2.train.distributed_utils import DistributedOption
 from espnet2.train.reporter import SubReporter
 from espnet2.train.trainer import Trainer, TrainerOptions
-from espnet2.utils.eer import ComputeErrorRates, ComputeMinDcf, tuneThresholdfromScore
 
 if torch.distributed.is_available():
     from torch.distributed import ReduceOp
@@ -45,13 +41,17 @@ class LIDTrainer(Trainer):
         output_dir: str,
         custom_bs: int,
         idx2lang: Dict[int, str],
+        extract_embd: bool = False,
+        save_every: int = 1000,
+        resume: bool = True,
     ) -> None: 
         # Extract language embedding and lids. 
         ngpu = options.ngpu
         distributed = distributed_option.distributed
 
         model.eval()
-        lang_embd_dic = {}
+        if extract_embd:
+            lang_embd_dic = {}
         lang_id_dic = {} # {utt_id: lang_id}
 
         # [For distributed] Because iteration counts are not always equals between
@@ -71,7 +71,16 @@ class LIDTrainer(Trainer):
             rank = 0
             world_size = 1
         idx = 0
-        for utt_id, batch in iterator:
+        step = 0 # for save middle results
+        if resume:
+            skip_utts = set()
+            if os.path.exists(f"{output_dir}/lids{rank}"):
+                with open(f"{output_dir}/lids{rank}", "r") as f:
+                    for line in f:
+                        utt_id, lid = line.strip().split()
+                        skip_utts.add(utt_id)
+            logging.info(f"[Rank {rank}] Resume: {len(skip_utts)} utterances found in {output_dir}/lids{rank}")
+        for utt_id, batch in tqdm(iterator, desc="LID Inference"):
             if "task_tokens" in batch:
                 task_token = batch["task_tokens"][0]
 
@@ -79,12 +88,16 @@ class LIDTrainer(Trainer):
             for _utt_id, _speech, _speech_length in zip(
                 utt_id, batch["speech"], batch["speech_lengths"]
             ):
+                if resume:
+                    if _utt_id in skip_utts:
+                        continue
                 if _utt_id not in utt_id_whole_list:
                     utt_id_whole_list.append(_utt_id)
                     if idx % world_size == rank:
                         utt_id_list.append(_utt_id)
                         speech_list.append(_speech)
                         speech_length_list.append(_speech_length)
+                    idx += 1
 
                     if len(utt_id_list) == custom_bs:
                         speech_list = torch.stack(speech_list, dim=0) # (bs, t), t is the length of the speech
@@ -109,12 +122,28 @@ class LIDTrainer(Trainer):
                             task_tokens=task_tokens,
                             extract_embd=True,
                         ) # [batch_size, dim], [batch_size]
-                        lang_embds = F.normalize(lang_embds, p=2, dim=1)
+                        if extract_embd:
+                            lang_embds = F.normalize(lang_embds, p=2, dim=1)
                         pred_lids = [idx2lang[lid.item()] for lid in pred_lids]
 
                         for uid, _lang_embd, _pred_lid in zip(utt_id_list, lang_embds, pred_lids):
-                            lang_embd_dic[uid] = _lang_embd.detach().cpu().numpy()
+                            if extract_embd:
+                                lang_embd_dic[uid] = _lang_embd.detach().cpu().numpy()
                             lang_id_dic[uid] = _pred_lid
+                        
+                        # save middle results
+                        if len(lang_id_dic) >= save_every:
+                            if extract_embd:
+                                # save each middle step results to different files
+                                np.savez(output_dir + f"/embeddings{rank + world_size * step}", **lang_embd_dic)
+                            with open(f"{output_dir}/lids{rank}", "a") as f:
+                                # save all middle step results to the same file
+                                for uid, lid in lang_id_dic.items():
+                                    f.write(f"{uid} {lid}\n")
+                            logging.info(f"[Rank {rank}] Saved {len(lang_id_dic)} utts at step {step}")
+                            lang_embd_dic.clear()
+                            lang_id_dic.clear()
+                            step += 1
 
                         utt_id_list = []
                         speech_list = []
@@ -147,9 +176,16 @@ class LIDTrainer(Trainer):
             pred_lids = [idx2lang[lid.item()] for lid in pred_lids]
 
             for uid, _lang_embd, _pred_lid in zip(utt_id_list, lang_embds, pred_lids):
-                lang_embd_dic[uid] = _lang_embd.detach().cpu().numpy()
+                if extract_embd:
+                    lang_embd_dic[uid] = _lang_embd.detach().cpu().numpy()
                 lang_id_dic[uid] = _pred_lid
 
-        np.savez(output_dir + f"/embeddings{rank}", **lang_embd_dic)
-        with open(f"{output_dir}/lids{distributed_option.dist_rank}.json", "w") as f:
-            json.dump(lang_id_dic, f)
+        if len(lang_id_dic) != 0:
+            # save the last results
+            if extract_embd:
+                np.savez(output_dir + f"/embeddings{rank + world_size * step}", **lang_embd_dic)
+            with open(f"{output_dir}/lids{rank}", "a") as f:
+                # save all middle step results to the same file
+                for uid, lid in lang_id_dic.items():
+                    f.write(f"{uid} {lid}\n")
+
