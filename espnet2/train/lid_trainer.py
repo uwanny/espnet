@@ -80,7 +80,7 @@ class LIDTrainer(Trainer):
                         utt_id, lid = line.strip().split()
                         skip_utts.add(utt_id)
             logging.info(f"[Rank {rank}] Resume: {len(skip_utts)} utterances found in {output_dir}/lids{rank}")
-        for utt_id, batch in tqdm(iterator, desc="LID Inference"):
+        for utt_id, batch in iterator:
             if "task_tokens" in batch:
                 task_token = batch["task_tokens"][0]
 
@@ -141,7 +141,8 @@ class LIDTrainer(Trainer):
                                 for uid, lid in lang_id_dic.items():
                                     f.write(f"{uid} {lid}\n")
                             logging.info(f"[Rank {rank}] Saved {len(lang_id_dic)} utts at step {step}")
-                            lang_embd_dic.clear()
+                            if extract_embd:
+                                lang_embd_dic.clear()
                             lang_id_dic.clear()
                             step += 1
 

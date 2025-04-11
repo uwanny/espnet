@@ -157,26 +157,32 @@ def extract_embed_lid(args):
         torch.distributed.barrier()
     if not distributed_option.distributed or distributed_option.dist_rank == 0:
         # Combine dictionaries into one
-        npzs = glob(args.output_dir + "/embeddings*.npz")
-        json_files = glob(args.output_dir + "/lids*.json")
-        logging.info(f"{npzs}")
-        embd_dic = {}
+        if args.extract_embd:
+            npzs = glob(args.output_dir + "/embeddings*.npz")
+            logging.info(f"{npzs}")
+            embd_dic = {}
+            for npz in npzs:
+                tmp_dic = dict(np.load(npz))
+                embd_dic.update(tmp_dic)
+
+        lid_files = glob(args.output_dir + "/lids*")
         lid_dic = {}
-        for npz in npzs:
-            tmp_dic = dict(np.load(npz))
-            embd_dic.update(tmp_dic)
-        for json_file in json_files:
-            with open(json_file, "r") as f:
-                tmp_dic = json.load(f)
-                lid_dic.update(tmp_dic)
+        for lid_file in lid_files:
+            with open(lid_file, "r") as f:
+                for line in f:
+                    utt_id, lid = line.strip().split()
+                    lid_dic[utt_id] = lid
+
         set_name = args.data_path_and_name_and_type[0][0].split("/")[-2]
-        np.savez(args.output_dir + f"/{set_name}_embeddings", **embd_dic)
-        with open(f"{args.output_dir}/{set_name}_lids.json", "w") as f:
+        if args.extract_embd:
+            np.savez(args.output_dir + f"/{set_name}_embeddings", **embd_dic)
+            for npz in npzs:
+                os.remove(npz)
+
+        with open(f"{args.output_dir}/{set_name}_lids", "w") as f:
             json.dump(lid_dic, f, indent=2)
-        for npz in npzs:
-            os.remove(npz)
-        for json_file in json_files:
-            os.remove(json_file)
+        for lid_file in lid_files:
+            os.remove(lid_file)
 
 
 def get_parser():

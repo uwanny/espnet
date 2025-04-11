@@ -54,6 +54,9 @@ from espnet2.train.lid_trainer import LIDTrainer
 from espnet2.utils.get_default_kwargs import get_default_kwargs
 from espnet2.utils.nested_dict_action import NestedDictAction
 from espnet2.utils.types import int_or_none, str2bool, str_or_none
+from torch.utils.data import DataLoader
+from espnet2.train.dataset import ESPnetDataset, ESPnetMultiTaskDataset
+from espnet2.train.iterable_dataset import IterableESPnetDataset
 
 # Check and understand
 frontend_choices = ClassChoices(
