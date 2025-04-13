@@ -1,5 +1,7 @@
 # code from WeSpeaker: https://github.com/wenet-e2e/wespeaker/blob/
 # c9ec537b53fe1e04525be74b2550ee95bed3a891/wespeaker/models/projections.py#L243
+# For understanding the code, please refer to:
+# https://chatgpt.com/share/67fb18e0-1f40-800a-b385-7636de448c11
 
 import math
 
@@ -99,6 +101,7 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
 
     def forward(self, input, label=None):
         
+        # there are k subcenter per class in weight
         cosine = F.linear(
             F.normalize(input), F.normalize(self.weight)
         )  # (batch, out_dim * k)
@@ -106,6 +109,8 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
             cosine, (-1, self.out_features, self.K)
         )  # (batch, out_dim, k)
         # subcenter max pooling, compute k max cosine, use the max one
+        # k subcenter per class in weight, cosine is the simlarity to these subcenters
+        # then select the top one. This is for intra-class marginization.
         cosine, _ = torch.max(cosine, 2)  # (batch, out_dim)
         pred_lids = torch.argmax(cosine, dim=1) # (batch,)
 
