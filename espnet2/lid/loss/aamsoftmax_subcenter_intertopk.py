@@ -1,6 +1,5 @@
 # code from WeSpeaker: https://github.com/wenet-e2e/wespeaker/blob/
 # c9ec537b53fe1e04525be74b2550ee95bed3a891/wespeaker/models/projections.py#L243
-# 暂时还没改好（整体改成lid，不留一点spk），还不能用
 
 import math
 
@@ -106,6 +105,7 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
         cosine = torch.reshape(
             cosine, (-1, self.out_features, self.K)
         )  # (batch, out_dim, k)
+        # subcenter max pooling, compute k max cosine, use the max one
         cosine, _ = torch.max(cosine, 2)  # (batch, out_dim)
         pred_lids = torch.argmax(cosine, dim=1) # (batch,)
 
@@ -119,8 +119,14 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
             return loss, accuracy, pred_lids
 
         sine = torch.sqrt(1.0 - torch.pow(cosine, 2))
-        phi = cosine * self.cos_m - sine * self.sin_m
-        phi_mp = cosine * self.cos_mp + sine * self.sin_mp
+        # phi: cos(theta + m), true class, +m, /, cos(+m) \, 
+        # -logcos(+m) /, original goal is \, hence is the penalty
+        phi = cosine * self.cos_m - sine * self.sin_m 
+        # phi_mp: for the topk samples, negative class
+        # cos(theta - mp), -mp, \, cos(-mp) /, -logcos(-mp) \,
+        # original goal is / (for negative class, we want max loss),
+        # hence is the penalty
+        phi_mp = cosine * self.cos_mp + sine * self.sin_mp # cos(theta - mp)
 
         if self.easy_margin:
             phi = torch.where(cosine > 0, phi, cosine)
@@ -134,7 +140,7 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
         one_hot.scatter_(1, label.view(-1, 1), 1)
 
         if self.k_top > 0:
-            # topk (j != y_i)
+            # topk (j != y_i), the top k expect the true class
             _, top_k_index = torch.topk(
                 cosine - 2 * one_hot, self.k_top
             )  # exclude j = y_i
@@ -142,9 +148,9 @@ class ArcMarginProduct_intertopk_subcenter(AbsLoss):
 
             # sum
             output = (
-                (one_hot * phi)
-                + (top_k_one_hot * phi_mp)
-                + ((1.0 - one_hot - top_k_one_hot) * cosine)
+                (one_hot * phi) # true class, phi
+                + (top_k_one_hot * phi_mp) # topk class (negative), phi_mp
+                + ((1.0 - one_hot - top_k_one_hot) * cosine) # other class, cosine, without margin
             )
         else:
             output = (one_hot * phi) + ((1.0 - one_hot) * cosine)
