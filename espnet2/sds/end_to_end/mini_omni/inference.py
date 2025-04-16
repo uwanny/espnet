@@ -381,7 +381,10 @@ def T1_T2(fabric, input_ids, model, text_tokenizer, step):
 
 def load_model(ckpt_dir, device):
     snacmodel = SNAC.from_pretrained("hubertsiuzdak/snac_24khz").eval().to(device)
-    whispermodel = whisper.load_model("small").to(device)
+    whispermodel = whisper.load_model(
+        "small",
+        download_root="/ocean/projects/cis210027p/jsunc/espnet/egs2/spoken_chatbot_arena/sds-spk",
+    ).to(device)
     text_tokenizer = Tokenizer(ckpt_dir)
     fabric = L.Fabric(devices=1, strategy="auto")
     config = Config.from_file(ckpt_dir + "/model_config.yaml")

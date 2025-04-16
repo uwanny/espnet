@@ -3,16 +3,18 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet2.sds.asr.abs_asr import AbsASR
+
+from espnet2.bin.spk_inference import Speech2Embedding
+from espnet2.sds.spk.abs_spk import AbsSPK
 
 
-class WhisperASRModel(AbsASR):
-    """Whisper ASR"""
+class ESPnetSPKModel(AbsSPK):
+    """ESPnet SPK"""
 
     @typechecked
     def __init__(
         self,
-        tag: str = "large",
+        tag: str = ("espnet/" "voxcelebs12_rawnet3"),
         device: str = "cuda",
         dtype: str = "float16",
     ):
@@ -20,7 +22,9 @@ class WhisperASRModel(AbsASR):
 
         Args:
         tag (str, optional):
-            The Whisper model tag
+            The pre-trained model tag (on Hugging Face).
+            Defaults to:
+            "espnet/voxcelebs12_rawnet3".
         device (str, optional):
             The computation device for running inference.
             Defaults to "cuda".
@@ -30,19 +34,10 @@ class WhisperASRModel(AbsASR):
             Defaults to "float16".
         """
         super().__init__()
-        try:
-            import whisper
-        except Exception as e:
-            print("Error: whisper is not properly installed.")
-            print(
-                "Please install whisper with: cd ${MAIN_ROOT}/tools &&",
-                "./installers/install_whisper.sh",
-            )
-            raise e
-        self.s2t = whisper.load_model(
-            tag,
+        self.spk = Speech2Embedding.from_pretrained(
+            model_tag=tag,
             device=device,
-            download_root="/ocean/projects/cis210027p/jsunc/espnet/egs2/spoken_chatbot_arena/sds-spk",
+            batch_size=1,
         )
         self.device = device
         self.dtype = dtype
@@ -62,27 +57,23 @@ class WhisperASRModel(AbsASR):
                 .cpu()
                 .numpy()
             )
-            _ = self.s2t.transcribe(torch.tensor(dummy_input).float(), beam_size=1)[
-                "text"
-            ]
+            _ = self.spk(dummy_input)
 
     def forward(self, array: np.ndarray) -> str:
         """Perform a forward pass on the given audio data,
 
-        returning the transcribed text prompt.
+        returning the speaker embedding.
 
         Args:
             array (np.ndarray):
-                The input audio data to be transcribed.
+                The input audio data to be converted to speaker embedding.
                 Typically a NumPy array.
 
         Returns:
-            str:
-                The transcribed text from the audio input,
-                as returned by the Whisper ASR model.
+            tensor:
+                The speaker embedding from the audio input,
+                as returned by the speech embedding model.
         """
         with torch.no_grad():
-            prompt = self.s2t.transcribe(torch.tensor(array).float(), beam_size=1)[
-                "text"
-            ]
-            return prompt
+            embedding = self.spk(array)
+            return embedding
