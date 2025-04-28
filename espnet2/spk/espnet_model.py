@@ -100,12 +100,12 @@ class ESPnetSpeakerModel(AbsESPnetModel):
 
         # 1. extract low-level feats (e.g., mel-spectrogram or MFCC)
         # Will do nothing for raw waveform-based models (e.g., RawNets)
-        feats, _ = self.extract_feats(speech, None)
+        feats, feat_lengths = self.extract_feats(speech, None)
 
         frame_level_feats = self.encode_frame(feats)
 
         # 2. aggregation into utterance-level
-        utt_level_feat = self.pooling(frame_level_feats, task_tokens)
+        utt_level_feat = self.pooling(frame_level_feats, task_tokens, feat_lengths)
 
         # 3. (optionally) go through further projection(s)
         spk_embd = self.project_spk_embd(utt_level_feat)

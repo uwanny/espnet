@@ -23,7 +23,7 @@ class StatsPooling(AbsPooling):
     def output_size(self):
         return self._output_size
 
-    def forward(self, x, task_tokens: torch.Tensor = None):
+    def forward(self, x, task_tokens: torch.Tensor = None, feat_lengths: torch.Tensor = None):
         if task_tokens is not None:
             raise ValueError("StatisticsPooling is not adequate for task_tokens")
         mu = torch.mean(x, dim=-1)

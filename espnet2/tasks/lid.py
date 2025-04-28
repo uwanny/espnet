@@ -210,7 +210,9 @@ class LIDTask(AbsTask):
             "--spk2utt",
             type=str,
             default="",
-            help="Directory of spk2utt file to be used in label mapping",
+            help="Directory of the train spk2utt file to be used in label mapping" \
+            "Note that both train and validation use the same spk2utt file, since" \
+            "we can only support the same categories during validation",
         )
 
         group.add_argument(

@@ -74,6 +74,7 @@ class AAMSoftmax(AbsLoss):
         one_hot.scatter_(1, label.view(-1, 1), 1)
         output = (one_hot * phi) + ((1.0 - one_hot) * cosine)
         output = output * self.s
-        accuracy = (torch.argmax(output, dim=1) == label).float().mean()
+        pred_lids = torch.argmax(output, dim=1)
+        accuracy = (pred_lids == label).float().mean()
         loss = self.ce(output, label)
-        return loss, accuracy
+        return loss, accuracy, pred_lids

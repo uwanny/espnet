@@ -2163,10 +2163,10 @@ class SpkPreprocessor(CommonPreprocessor):
     ) -> Dict[str, np.ndarray]:
         """Make speaker labels into integers."""
         if self.train:
-            int_label = self.spk2label[data["lid_labels"]]
-            data["lid_labels"] = np.asarray([int_label], dtype=np.int64)
+            int_label = self.spk2label[data["spk_labels"]]
+            data["spk_labels"] = np.asarray([int_label], dtype=np.int64)
         else:
-            data["lid_labels"] = np.asarray([int(data["lid_labels"])])
+            data["spk_labels"] = np.asarray([int(data["spk_labels"])])
 
         if "task_tokens" in data:
             data["task_tokens"] = np.asarray([int(data["task_tokens"])])
@@ -2228,6 +2228,7 @@ class LIDPreprocessor(CommonPreprocessor):
         self.target_duration = int(target_duration * sample_rate) if target_duration else None
         self.fix_duration = fix_duration
         self.train = train
+        self.spk2utt_path = spk2utt
 
         with open(spk2utt, "r") as f_s2u:
             self.spk2utt = f_s2u.readlines()
@@ -2265,6 +2266,7 @@ class LIDPreprocessor(CommonPreprocessor):
     def __repr__(self):
         name = self.__class__.__module__ + "." + self.__class__.__name__
         msg = f"{name}(train={self.train}"
+        msg += f", spk2utt={self.spk2utt_path}"
         if self.spk2label:
             msg += f", len(spk2label)={len(self.spk2label)}"
         if self.fix_duration:

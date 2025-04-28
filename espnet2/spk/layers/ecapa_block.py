@@ -27,6 +27,10 @@ class SEModule(nn.Module):
 
 
 class EcapaBlock(nn.Module):
+    """
+    Res2Net refer to https://arxiv.org/pdf/1904.01169
+    """
+
     def __init__(self, inplanes, planes, kernel_size=None, dilation=None, scale=8):
         super().__init__()
         width = int(math.floor(planes / scale))
@@ -61,7 +65,7 @@ class EcapaBlock(nn.Module):
         out = self.relu(out)
         out = self.bn1(out)
 
-        spx = torch.split(out, self.width, 1)
+        spx = torch.split(out, self.width, 1) # tensor, split size, dim
         for i in range(self.nums):
             if i == 0:
                 sp = spx[i]
