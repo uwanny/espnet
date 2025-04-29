@@ -31,10 +31,10 @@ from espnet2.lid.loss.aamsoftmax_subcenter_intertopk import (
     ArcMarginProduct_intertopk_subcenter,
 )
 from espnet2.lid.loss.softmax import Softmax
-from espnet2.spk.pooling.abs_pooling import AbsPooling
-from espnet2.spk.pooling.chn_attn_stat_pooling import ChnAttnStatPooling
-from espnet2.spk.pooling.mean_pooling import MeanPooling
-from espnet2.spk.pooling.stat_pooling import StatsPooling
+from espnet2.lid.pooling.abs_pooling import AbsPooling
+from espnet2.lid.pooling.chn_attn_stat_pooling import ChnAttnStatPooling
+from espnet2.lid.pooling.mean_pooling import MeanPooling
+from espnet2.lid.pooling.stat_pooling import StatsPooling
 from espnet2.spk.projector.abs_projector import AbsProjector
 from espnet2.spk.projector.rawnet3_projector import RawNet3Projector
 from espnet2.spk.projector.ska_tdnn_projector import SkaTdnnProjector
