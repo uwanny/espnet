@@ -476,38 +476,44 @@ fi
 if [ ${stage} -le 6 ] && [ ${stop_stage} -ge 6 ]; then
     log "Stage 6: Language embedding extraction and language id identification."
 
-    infer_exp="${spk_exp}/inference"
-    _inference_dir=${data_feats}/${test_sets}
-    if echo "${cuda_cmd}" | grep -e queue.pl -e queue-freegpu.pl &> /dev/null; then
-        # SGE can't include "/" in a job name
-        jobname="$(basename ${infer_exp})"
-    else
-        jobname="${infer_exp}/lid_inference.log"
-    fi
+    # infer_exp="${spk_exp}/inference"
+    # _inference_dir=${data_feats}/${test_sets}
 
-    log "Extracting language embeddings and ids... log: '${infer_exp}/lid_inference_test.log'"
-    ${python} -m espnet2.bin.launch \
-        --cmd "${cuda_cmd} --name ${jobname}" \
-        --log ${infer_exp}/lid_inference_test.log \
-        --ngpu ${ngpu} \
-        --num_nodes ${num_nodes} \
-        --init_file_prefix ${spk_exp}/.dist_init_ \
-        --multiprocessing_distributed true -- \
-        ${python} -m espnet2.bin.lid_inference_dist \
-            --output_dir ${infer_exp} \
-            --dtype float32 \
-            --data_path_and_name_and_type "${_inference_dir}/wav.scp,speech,sound" \
-            --data_path_and_name_and_type "${_inference_dir}/utt2spk,lid_labels,text" \
-            --valid_batch_size ${inference_batch_size} \
-            --lid_train_config "${spk_exp}/config.yaml" \
-            --lid_model_file "${spk_exp}"/${inference_model} \
-            --use_preprocessor true \
-            --fix_duration false \
-            --num_workers ${nj} \
-            --extract_embd ${extract_embd} \
-            --save_every ${save_every} \
-            --resume true \
-            ${spk_args}
+    for test_set in ${test_sets}; do
+        infer_exp="${spk_exp}/inference/${test_set}"
+        _inference_dir=${data_feats}/${test_set}
+
+        if echo "${cuda_cmd}" | grep -e queue.pl -e queue-freegpu.pl &> /dev/null; then
+            # SGE can't include "/" in a job name
+            jobname="$(basename ${infer_exp})"
+        else
+            jobname="${infer_exp}/lid_inference.log"
+        fi
+
+        log "Extracting language embeddings and ids... log: '${infer_exp}/lid_inference_test.log'"
+        ${python} -m espnet2.bin.launch \
+            --cmd "${cuda_cmd} --name ${jobname}" \
+            --log ${infer_exp}/lid_inference_test.log \
+            --ngpu ${ngpu} \
+            --num_nodes ${num_nodes} \
+            --init_file_prefix ${spk_exp}/.dist_init_ \
+            --multiprocessing_distributed true -- \
+            ${python} -m espnet2.bin.lid_inference_dist \
+                --output_dir ${infer_exp} \
+                --dtype float32 \
+                --data_path_and_name_and_type "${_inference_dir}/wav.scp,speech,sound" \
+                --data_path_and_name_and_type "${_inference_dir}/utt2spk,lid_labels,text" \
+                --valid_batch_size ${inference_batch_size} \
+                --lid_train_config "${spk_exp}/config.yaml" \
+                --lid_model_file "${spk_exp}"/${inference_model} \
+                --use_preprocessor true \
+                --fix_duration false \
+                --num_workers ${nj} \
+                --extract_embd ${extract_embd} \
+                --save_every ${save_every} \
+                --resume true \
+                ${spk_args}
+    done
 fi
 
 if [ ${stage} -le 7 ] && [ ${stop_stage} -ge 7 ]; then
