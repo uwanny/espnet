@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 
-from espnet2.spk.pooling.abs_pooling import AbsPooling
+from espnet2.lid.pooling.abs_pooling import AbsPooling
 
 
 class ChnAttnStatPooling(AbsPooling):
