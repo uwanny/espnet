@@ -295,25 +295,16 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
             # copy extra files that are not covered by copy_data_dir.sh
             # category2utt will be used bydata sampler
             cp data/"${dset}/spk2utt" "${data_feats}/${dset}/category2utt"
-            cp data/${dset}/trial_label "${data_feats}/${dset}"
 
             # shellcheck disable=SC2086
             scripts/audio/format_wav_scp.sh --nj "${nj}" --cmd "${train_cmd}" \
                 --audio-format "${audio_format}" --fs "${fs}" \
                 --multi-columns-input "${multi_columns_input_wav_scp}" \
                 --multi-columns-output "${multi_columns_output_wav_scp}" \
-                --out_filename trial.scp \
-                "data/${dset}/trial.scp" "${data_feats}/${dset}"
-            # shellcheck disable=SC2086
-            scripts/audio/format_wav_scp.sh --nj "${nj}" --cmd "${train_cmd}" \
-                --audio-format "${audio_format}" --fs "${fs}" \
-                --multi-columns-input "${multi_columns_input_wav_scp}" \
-                --multi-columns-output "${multi_columns_output_wav_scp}" \
-                --out_filename trial2.scp \
-                "data/${dset}/trial2.scp" "${data_feats}/${dset}"
+                "data/${dset}/wav.scp" "${data_feats}/${dset}"
 
             echo "${feats_type}" > "${data_feats}/${dset}/feats_type"
-            echo "multi_${audio_format}" > "${data_feats}/${dset}/audio_format"
+            echo "${audio_format}" > "${data_feats}/${dset}/audio_format"
 
         done
     elif [ "${feats_type}" = raw_copy ]; then
@@ -327,29 +318,19 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
             cp data/rirs.scp ${data_feats}/rirs.scp
 
             echo "${feats_type}" > "${data_feats}/${train_set}/feats_type"
-            if "${multi_columns_output_wav_scp}"; then
-                echo "multi_${audio_format}" > "${data_feats}/${train_set}/audio_format"
-            else
-                echo "${audio_format}" > "${data_feats}/${train_set}/audio_format"
-            fi
+            echo "${audio_format}" > "${data_feats}/${train_set}/audio_format"
         fi
 
         # Calculate EER for valid/test since speaker verification is an open set problem
         # Train can be either multi-column data or not, but valid/test always require multi-column trial
         for dset in ${_dsets}; do
             utils/copy_data_dir.sh --validate_opts --non-print data/"${dset}" "${data_feats}/${dset}"
-            cp data/${dset}/trial_label "${data_feats}/${dset}"
-            cp data/${dset}/trial.scp "${data_feats}/${dset}"
-            cp data/${dset}/trial2.scp "${data_feats}/${dset}"
 
             echo "${feats_type}" > "${data_feats}/${dset}/feats_type"
-            echo "multi_${audio_format}" > "${data_feats}/${dset}/audio_format"
+            echo "${audio_format}" > "${data_feats}/${dset}/audio_format"
 
         done
 
-        for f in ${utt_extra_files}; do
-            [ -f data/${dset}/${f} ] && cp data/${dset}/${f} ${data_feats}/${dset}/${f}
-        done
     else
         log "${feats_type} is not supported yet."
         exit 1
