@@ -1,0 +1,123 @@
+# ECAPA-TDNN reproduce recipe configuration.
+
+# This is the best tuned configuration for mms-1b xvector model.
+# The original path is 
+# /ocean/projects/cis210027p/qwang20/espnet/egs2/lid/spk1/conf/mms_1b/train_lid_mms_unfrozen_xvector_origin_lr5e-6_bs6m_step30k_3warm_fix_catpow_non_fix_duration_max_bs8.yaml
+
+# !!!!! NOTE YOU MUST READ !!!!!
+# if set `fix_duration: False`, the speech will not be cut to same length, 
+# the raw speech length is much longer than the target length, so under this case, 
+# you should set lower batch_bins to avoid OOM.
+# Use `fix_duration: True`, set the speech to same length, then we could use
+# larger batch size and lower sequence length, but `fix_duration: False`, for the 
+# same batch_bins, we could only use smaller batch size, and larger sequence length.
+# Attention complexity is linear to batch size but quadratic to sequence length.
+# So, to use `fix_duration: False`, you must lower the batch_bins to avoid OOM.
+
+# Frontend
+frontend: s3prl
+frontend_conf:
+    frontend_conf:
+        upstream: hf_wav2vec2_custom
+        path_or_url: facebook/mms-1b
+    download_dir: ./hub
+    multilayer_feature: True
+
+# Normalizer
+normalize: utterance_mvn
+normalize_conf:
+    norm_vars: false
+
+# Encoder
+encoder: xvector
+encoder_conf:
+  ndim: 512
+  output_size: 1500
+  kernel_sizes: [5, 3, 3, 1, 1]
+  paddings: [2, 1, 1, 0, 0]
+  dilations: [1, 2, 3, 1, 1]
+
+# Pooling
+pooling: chn_attn_stat
+
+# Projector
+projector: rawnet3
+projector_conf:
+  output_size: 192
+
+# Preprocessor
+preprocessor: lid
+preprocessor_conf:
+  fix_duration: False
+  sample_rate: 16000
+  noise_apply_prob: 0.0
+  noise_info:
+  - [1.0, 'dump/raw/musan_speech.scp', [4, 7], [13, 20]]
+  - [1.0, 'dump/raw/musan_noise.scp', [1, 1], [0, 15]] # prob, noise_scp, num_to_mix, db_range
+  - [1.0, 'dump/raw/musan_music.scp', [1, 1], [5, 15]]
+  rir_apply_prob: 0.0
+  rir_scp: dump/raw/rirs.scp
+
+# Model conf
+model_conf:
+  extract_feats_in_collect_stats: false
+
+# Loss
+loss: aamsoftmax_sc_topk
+loss_conf:
+  margin: 0.5
+  scale: 30
+  K: 3
+  mp: 0.06
+  k_top: 5
+
+# Training related
+num_att_plot: 0
+num_workers: 8
+cudnn_deterministic: False
+cudnn_benchmark: True
+
+log_interval: 100
+unused_parameters: True
+use_amp: True
+keep_nbest_models: 2
+grad_clip: 9999 # equals to no clip
+best_model_criterion:
+- - valid
+  - loss
+  - min
+
+# data iterator
+iterator_type: category
+valid_iterator_type: category
+seed: 3702
+
+# total training steps: (10k, 20k, 30k, 40k, 50k)
+max_epoch: 30 # total training steps = max_epoch * num_iters_per_epoch / accum_grad
+accum_grad: 1
+num_iters_per_epoch: 1000
+
+# batch sampler
+batch_type: catpow # CategoryPowerSampler, the sampler with an upsampling factor used in MMS
+batch_bins: 1440000 # 2880000: 16kHz * 3min (180s), 5760000: 6min (1.5min, 3min, 6min), not exactly 3 min, but over 3 min then stop add more utterances.
+max_batch_size: 8
+upsampling_factor: 0.5
+dataset_scaling_factor: 1.2
+drop_last_iter: False
+
+# Optimizer
+optim: adam
+optim_conf:
+  lr: 0.000005 # (1e−5, 3e−5, 3e−6, 5e−6, 7e−6)
+  betas: [0.9, 0.98]
+
+# Scheduler
+scheduler: tristagelr
+scheduler_conf:
+  max_steps: 30000 # must be equal to max_epoch * num_iters_per_epoch / accum_grad
+  warmup_ratio: 0.3
+  hold_ratio: 0.2
+  decay_ratio: 0.5
+  init_lr_scale: 0.6 # start from 3e-6
+  final_lr_scale: 0.1 # end with 5e-7
+
