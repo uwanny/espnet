@@ -287,13 +287,11 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
             fi
         fi
 
-        # Calculate EER for valid/test since speaker verification is an open set problem
-        # Train can be either multi-column data or not, but valid/test always require multi-column trial
         for dset in ${_dsets}; do
             utils/copy_data_dir.sh --validate_opts --non-print data/"${dset}" "${data_feats}/${dset}"
 
             # copy extra files that are not covered by copy_data_dir.sh
-            # category2utt will be used bydata sampler
+            # category2utt will be used by data sampler
             cp data/"${dset}/spk2utt" "${data_feats}/${dset}/category2utt"
 
             # shellcheck disable=SC2086
@@ -325,6 +323,8 @@ if [ ${stage} -le 3 ] && [ ${stop_stage} -ge 3 ]; then
         # Train can be either multi-column data or not, but valid/test always require multi-column trial
         for dset in ${_dsets}; do
             utils/copy_data_dir.sh --validate_opts --non-print data/"${dset}" "${data_feats}/${dset}"
+
+            cp data/"${dset}/spk2utt" "${data_feats}/${dset}/category2utt"
 
             echo "${feats_type}" > "${data_feats}/${dset}/feats_type"
             echo "${audio_format}" > "${data_feats}/${dset}/audio_format"
@@ -404,7 +404,6 @@ if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
     # shellcheck disable=SC2086
     ${python} -m espnet2.bin.aggregate_stats_dirs ${_opts} --skip_sum_stats --output_dir "${spk_stats_dir}"
 
-    cp ${spk_stats_dir}/valid/speech_shape ${spk_stats_dir}/valid/speech_shape2
 fi
 
 if [ ${stage} -le 5 ] && [ ${stop_stage} -ge 5 ]; then
